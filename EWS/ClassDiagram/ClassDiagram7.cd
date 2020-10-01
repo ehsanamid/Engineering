@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EWSTools.DCSSolution">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="EWSTools.DCSSolution.EWS_Status" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DCSSolution.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Delegate Name="EWSTools.DCSSolution.ProjectChangedEvent" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DCSSolution.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>KU0lIQgpaYYCQAByHoACaQIJAjBAAAgIADIDAWoMBgI=</HashCode>
+      <FileName>DCSSolution.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

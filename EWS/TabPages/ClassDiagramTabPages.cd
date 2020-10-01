@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EWS.TabPages.TabDisplayPageControl">
+    <Position X="17" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAIAAAAAAgACAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TabPages\TabDisplayPageControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWS.TabPages.TabFBDPageControl">
+    <Position X="22.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAwAkECAAAAUIAQEIAAgICAAACEAABBEAAQAgBEAA=</HashCode>
+      <FileName>TabPages\TabFBDPageControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWS.TabPages.TabGraphicPageControl">
+    <Position X="18.75" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAIAAAACAgACAABCAAAABAAAAAAAAAA=</HashCode>
+      <FileName>TabPages\TabGraphicPageControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWS.TabPages.TabGridPageControl">
+    <Position X="12.5" Y="7" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAALAAACCAgACgAACEAAABAAACAAAAkA=</HashCode>
+      <FileName>TabPages\TabGridPageControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWS.TabPages.TabPageControl">
+    <Position X="6.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAEECAAAgRJAAAEAQgACQAACAIAABAAAAAAEAgA=</HashCode>
+      <FileName>TabPages\TabPageControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWS.TabPages.TabPageGridAlarmGroupControl">
+    <Position X="4" Y="8.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAEgEAAgAAKBgMCDgkICSQgCIAAABCABECAAgBA=</HashCode>
+      <FileName>TabPages\TabPageGridAlarmGroupControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWS.TabPages.TabSFCPageControl">
+    <Position X="19.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAwAkECAAAAUIAQEIAAgICAAACEAABAAAAQAgBEAA=</HashCode>
+      <FileName>TabPages\TabSFCPageControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWS.TabPages.TabSTPageControl" Collapsed="true">
+    <Position X="0.75" Y="10.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAEIAQAIAAgACAAACAAABAAAAAAAAAAA=</HashCode>
+      <FileName>TabPages\TabSTPageControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWS.TabPages.TabTextPageControl">
+    <Position X="0.75" Y="7.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgEAAAAAAAIAAAACAgACAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TabPages\TabTextPageControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWS.TabPages.TabVariableGridPageControl">
+    <Position X="9" Y="8.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAEEAAFIAAKAAACCAgACkAACkAAAAAAACAAAAkA=</HashCode>
+      <FileName>TabPages\TabVariableGridPageControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Delegate Name="EWS.TabPages.TabVariableGridPageControlSetDirty" Collapsed="true">
+    <Position X="10.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TabPages\TabVariableGridPageControl.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

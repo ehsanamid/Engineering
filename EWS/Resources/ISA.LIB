@@ -1,0 +1,477 @@
+{B:sig_gen
+01 < RUN
+08 < PERIOD
+02 < MAXIMUM
+01 > PULSE
+02 > UP
+01 > END
+04 > SINE
+}
+{B:RS
+01 < SET
+01 < RESET1
+01 > Q1
+}
+{B:SR
+01 < SET1
+01 < RESET
+01 > Q1
+}
+{B:r_trig
+01 < CLK
+01 > Q
+}
+{B:f_trig
+01 < CLK
+01 > Q
+}
+{B:CTU
+01 < CU
+01 < RESET
+02 < PV
+01 > Q
+02 > CV
+}
+{B:CTD
+01 < CD
+01 < LOAD
+02 < PV
+01 > Q
+02 > CV
+}
+{B:CTUD
+01 < CU
+01 < CD
+01 < RESET
+01 < LOAD
+02 < PV
+01 > QU
+01 > QD
+02 > CV
+}
+{B:TON
+01 < IN
+08 < PT
+01 > Q
+08 > ET
+}
+{B:TOF
+01 < IN
+08 < PT
+01 > Q
+08 > ET
+}
+{B:TP
+01 < IN
+08 < PT
+01 > Q
+08 > ET
+}
+{B:sema
+01 < CLAIM
+01 < RELEASE
+01 > BUSY
+}
+{B:CMP
+02 < VAL1
+02 < VAL2
+01 > LT
+01 > EQ
+01 > GT
+}
+{B:stackint
+01 < PUSH
+01 < POP
+01 < R1
+02 < IN
+02 < N
+01 > EMPTY
+01 > OFLO
+02 > OUT
+}
+{B:derivate
+01 < RUN
+04 < XIN
+08 < CYCLE
+04 > XOUT
+}
+{B:hyster
+04 < XIN1
+04 < XIN2
+04 < EPS
+01 > Q
+}
+{B:average
+01 < RUN
+04 < XIN
+02 < N
+04 > XOUT
+}
+{B:lim_alrm
+04 < H
+04 < X
+04 < L
+04 < EPS
+01 > QH
+01 > Q
+01 > QL
+}
+{B:blink
+01 < RUN
+08 < CYCLE
+01 > Q
+}
+{B:integral
+01 < RUN
+01 < R1
+04 < XIN
+04 < X0
+08 < CYCLE
+01 > Q
+04 > XOUT
+}
+{F:abs
+04 < IN
+04 > Q
+}
+{F:acos
+04 < IN
+04 > Q
+}
+{F:asin
+04 < IN
+04 > Q
+}
+{F:atan
+04 < IN
+04 > Q
+}
+{F:cos
+04 < IN
+04 > Q
+}
+{F:expt
+04 < IN
+02 < EXP
+04 > Q
+}
+{F:log
+04 < IN
+04 > Q
+}
+{F:sin
+04 < IN
+04 > Q
+}
+{F:sqrt
+04 < IN
+04 > Q
+}
+{F:tan
+04 < IN
+04 > Q
+}
+{F:trunc
+04 < IN
+04 > Q
+}
+{F:pow
+04 < IN
+04 < EXP
+04 > Q
+}
+{F:and_mask
+02 < IN
+02 < MSK
+02 > Q
+}
+{F:limit
+02 < MIN
+02 < IN
+02 < MAX
+02 > Q
+}
+{F:max
+02 < IN1
+02 < IN2
+02 > Q
+}
+{F:min
+02 < IN1
+02 < IN2
+02 > Q
+}
+{F:mod
+02 < IN
+02 < Base
+02 > Q
+}
+{F:mux4
+02 < SEL
+02 < IN1
+02 < IN2
+02 < IN3
+02 < IN4
+02 > Q
+}
+{F:mux8
+02 < SEL
+02 < IN1
+02 < IN2
+02 < IN3
+02 < IN4
+02 < IN5
+02 < IN6
+02 < IN7
+02 < IN8
+02 > Q
+}
+{F:not_mask
+02 < IN
+02 > Q
+}
+{F:or_mask
+02 < IN
+02 < MSK
+02 > Q
+}
+{F:rand
+02 < base
+02 > Q
+}
+{F:rol
+02 < IN
+02 < NbR
+02 > Q
+}
+{F:ror
+02 < IN
+02 < NbR
+02 > Q
+}
+{F:sel
+01 < SEL
+02 < IN1
+02 < IN2
+02 > Q
+}
+{F:shl
+02 < IN
+02 < NbS
+02 > Q
+}
+{F:shr
+02 < IN
+02 < NbS
+02 > Q
+}
+{F:xor_mask
+02 < IN
+02 < MSK
+02 > Q
+}
+{F:odd
+02 < IN
+01 > Q
+}
+{F:ascii
+10 < IN
+02 < Pos
+02 > Code
+}
+{F:char
+02 < Code
+10 > Q
+}
+{F:delete
+10 < IN
+02 < NbC
+02 < Pos
+10 > Q
+}
+{F:find
+10 < In
+10 < Pat
+02 > Pos
+}
+{F:insert
+10 < IN
+10 < Str
+02 < Pos
+10 > Q
+}
+{F:left
+10 < IN
+02 < NbC
+10 > Q
+}
+{F:mid
+10 < IN
+02 < NbC
+02 < Pos
+10 > Q
+}
+{F:mlen
+10 < IN
+02 > NbC
+}
+{F:replace
+10 < IN
+10 < Str
+02 < NbC
+02 < Pos
+10 > Q
+}
+{F:right
+10 < IN
+02 < NbC
+10 > Q
+}
+{F:arcreate
+02 < ID
+02 < Size
+02 > ok
+}
+{F:arread
+02 < ID
+02 < Pos
+02 > Q
+}
+{F:arwrite
+02 < ID
+02 < Pos
+02 < IN
+02 > ok
+}
+{F:day_time
+02 < SEL
+10 > Q
+}
+
+{F:F_ROPEN
+10 < Path
+02 > ID
+}
+{F:F_WOPEN
+10 < Path
+02 > ID
+}
+{F:FA_READ
+02 < ID
+02 > Q
+}
+{F:FM_READ
+02 < ID
+10 > Q
+}
+{F:FA_WRITE
+02 < ID
+02 < IN
+01 > ok
+}
+{F:FM_WRITE
+02 < ID
+10 < IN
+01 > ok
+}
+{F:F_CLOSE
+02 < ID
+01 > ok
+}
+{F:F_EOF
+02 < ID
+01 > ok
+}
+{F:<:less than
+06 < IN1
+06 < IN2
+01 > Q
+}
+{F:>:greater than
+06 < IN1
+06 < IN2
+01 > Q
+}
+{F:<=:less than or equal
+06 < IN1
+06 < IN2
+01 > Q
+}
+{F:>=:greater than or equal
+06 < IN1
+06 < IN2
+01 > Q
+}
+{F:<>:is not equal
+06 < IN1
+06 < IN2
+01 > Q
+}
+{F:=:is equal
+06 < IN1
+06 < IN2
+01 > Q
+}
+{F:Boo:Boo
+1E < IN
+01 > Q
+}
+{F:Ana:Ana
+1D < IN
+02 > Q
+}
+{F:Real:Real
+1B < IN
+04 > Q
+}
+{F:Tmr:Tmr
+17 < IN
+08 > Q
+}
+{F:Msg:Msg
+0F < IN
+10 > Q
+}
+{F:gain:1 gain
+1F < IN
+1F > Q
+}
+{F:Neg:1 Negate
+06 < IN
+06 > Q
+}
+{E:OR:OR
+01 < IN
+01 > Q
+}
+{E:AND:AND
+01 < IN
+01 > Q
+}
+{E:+:ADD
+06 < IN
+06 > Q
+}
+{E:*:MUL
+06 < IN
+06 > Q
+}
+{E:CAT:CAT
+10 < IN
+10 > Q
+}
+{F:XOR:XOR
+01 < IN1
+01 < IN2
+01 > Q
+}
+{F:-:SUB
+06 < IN1
+06 < IN2
+06 > Q
+}
+{F:/:DIV
+06 < IN1
+06 < IN2
+06 > Q
+}

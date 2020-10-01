@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DCS.Draw.FBD.DrawFBDBox">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AoAAkICCGJBAAhAgEAgSgIAAAAAyEEAhAwAAURECAhA=</HashCode>
+      <FileName>Draw\FBD\DrawFBDBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DCS.Draw.FBD.FBDObjectPin">
+    <Position X="6.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAgAIAAAAJQEABAAAIQAACAAAIALAZIAEACAAIZAA=</HashCode>
+      <FileName>Draw\FBD\FBDObjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DCS.Draw.FBD.FBDObjectPinCollection" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEIACEAACAAAAAAgCAAARAAAABAEIAAAAERAAAAQCAA=</HashCode>
+      <FileName>Draw\FBD\FBDObjects.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DCS.Draw.FBD.FBDboxObject">
+    <Position X="3.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABQBgQAAAAAgAEAAAgAAAAACACgAEBAAAAAAAAAAAA=</HashCode>
+      <FileName>Draw\FBD\FBDObjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="DCS.Draw.FBD.Pin_Fields">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAIAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Draw\FBD\FBDObjects.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

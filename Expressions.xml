@@ -1,0 +1,60 @@
+<GraphicalObject>
+<Parameters>
+<Parameter Index="0">
+<Name>"A1"</Name>
+<Type>"BOOL"</Type>
+<Reference>"True"</Reference>
+<Assignment>"FCS00_01GLOBALBOOL008"</Assignment>
+</Parameter>
+<Parameter Index = "1">
+<Name>"A2"</Name>
+<Type>"BOOL"</Type>
+<Reference>"True"</Reference>
+<Assignment>"FCS00_01GLOBALBOOL007"</Assignment>
+</Parameter>
+<Parameter Index="2">
+<Name>"A3"</Name>
+<Type>"BOOL"</Type>
+<Reference>"True"</Reference>
+<Assignment>"FCS00_01GLOBALBOOL006"</Assignment>
+</Parameter>
+</Parameters>
+<GraphicObjectPropertys>
+<GraphicObjectProperty>
+<ObjectType>"LineWidth"</ObjectType>
+<ReturnType>"DINT"</ReturnType>
+<Condition Index="0">
+<if>"@A1.val=@a2.val"</if>
+<then>"3"</then>
+</Condition>
+<Condition Index = "1">
+<if>"@A1.val=@a3.val"</if>
+<then>"5"</then>
+</Condition>
+</GraphicObjectProperty>
+<GraphicObjectProperty>
+<ObjectType>"Visible"</ObjectType>
+<ReturnType>"True"</ReturnType>
+<Condition Index="0">
+<if>"@A1.val=@a2.val"</if>
+<then>"false"</then>
+</Condition>
+<Condition Index = "1">
+<if>"@A1.val=@a3.val"</if>
+<then>"false"</then>
+</Condition>
+</GraphicObjectProperty>
+</GraphicObjectPropertys>
+<EventHandlers>
+<EventHandler>
+<Event>"LDBClick"</Event>
+<Type>"OPENWINDOW 012p12"</Type>
+<Access>"1"</Access>
+</EventHandler>
+<EventHandler>
+<Event>"RDBClick"</Event>
+<Type>"OPENWINDOW 012p12"</Type>
+<Access>"1"</Access>
+</EventHandler>
+</EventHandlers>
+</GraphicalObject>

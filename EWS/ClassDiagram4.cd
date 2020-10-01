@@ -1,0 +1,809 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EWSTools.IEC61131.project" Collapsed="true">
+    <Position X="24" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAgAQAAgCCBAAAAAAAQAIABAAAAAAAAAABIAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectFileHeader" Collapsed="true">
+    <Position X="24" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IABAAAAAAAABBQABAIAAAAAAAAACAACBgggAAAAAAEA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.pouInstance" Collapsed="true">
+    <Position X="22.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAQAAAACAAAIAEAAQAAAAEAAAIAAAQAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.addDataData" Collapsed="true">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAQAAAAAAAAAAAAAIAAAAAAAAAEAAABAACAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.varListConfig" Collapsed="true">
+    <Position X="20.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAQAAAACAAAAAAAASgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.varListConfigConfigVariable" Collapsed="true">
+    <Position X="22.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEAAQAAKECAAAAAAAAQAAAIBAAAAAEAAAAAIAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.dataType" Collapsed="true">
+    <Position X="18.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAQEAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.dataTypeArray" Collapsed="true">
+    <Position X="20.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAABAAAoAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.rangeSigned" Collapsed="true">
+    <Position X="25.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAQAAAAAAAAAAAAAAAABAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.dataTypeDerived" Collapsed="true">
+    <Position X="22.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAQAAAAAAAAIAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.dataTypeEnum" Collapsed="true">
+    <Position X="24" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAgAACAAAAAAAQAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.dataTypeEnumValues" Collapsed="true">
+    <Position X="25.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.dataTypeEnumValuesValue" Collapsed="true">
+    <Position X="27.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAGACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.dataTypePointer" Collapsed="true">
+    <Position X="29.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.dataTypeString" Collapsed="true">
+    <Position X="31" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.varListPlain" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAQAAAACAAAAAAAAQAEAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.varListPlainVariable" Collapsed="true">
+    <Position X="24" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgECAQAAKACAAAIAAAAQAAAIFAAAIAEAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.value" Collapsed="true">
+    <Position X="1.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.valueArrayValue" Collapsed="true">
+    <Position X="29.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.valueArrayValueValue" Collapsed="true">
+    <Position X="2.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.valueSimpleValue" Collapsed="true">
+    <Position X="31" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.valueStructValue" Collapsed="true">
+    <Position X="32.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.valueStructValueValue" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.varList" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAgAACAAAAAIAAIAAAAMBEAAAAAAAIAAAEAQA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.dataTypeSubrangeSigned" Collapsed="true">
+    <Position X="32.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAIAAAAAAAAAAACAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.dataTypeSubrangeUnsigned" Collapsed="true">
+    <Position X="17" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAIAAAAAAAAAAACAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.rangeUnsigned" Collapsed="true">
+    <Position X="27.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAQAAAAAAAAAAAAAAAABAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.dataTypeWstring" Collapsed="true">
+    <Position X="18.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.varListAccess" Collapsed="true">
+    <Position X="17" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAQAAEACAAAAAAAAQBAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.varListAccessAccessVariable" Collapsed="true">
+    <Position X="18.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAggAAQAACMCgAAAAAAAQAAAAJAAAAAAAAAQEIAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.connectionPointOut" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAQAAAAAAAAAAAAAAAABAAAAAIAIAAAAAEAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.position" Collapsed="true">
+    <Position X="20.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAEABgAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.connection" Collapsed="true">
+    <Position X="17" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAgACAQAAAEAAAAAAAIAAAAAAAIAAIAAAAAAAAIAE=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.connectionPointIn" Collapsed="true">
+    <Position X="8.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAQAAACAAAAAAAAAAAABAAAAAIAAAAAAAEAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.body" Collapsed="true">
+    <Position X="5.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgQCAQAAgCCAAAAAAAAQEAAAAAAAIAAAgAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBD" Collapsed="true">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDActionBlock" Collapsed="true">
+    <Position X="22.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hUAAhACEQAQAACQCwgAJIAQAgACAAAAIMAAAACQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDActionBlockAction" Collapsed="true">
+    <Position X="24" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAgAKEQEQAoCVCwAIJAAwIgBCAAAgIMAAAAAQUgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDActionBlockActionReference" Collapsed="true">
+    <Position X="25.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDBlock" Collapsed="true">
+    <Position X="27.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAAAiACFwAQAACQC0AANIAQAgACAAAAIMAAUAAAAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDBlockVariable" Collapsed="true">
+    <Position X="29.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAAAAAAAAAAECAAAgAAAAQAAAAAAAAAAASCAEQAoAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDBlockVariable1" Collapsed="true">
+    <Position X="31" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAAAAAAAAAAECAAAgAAAAQIAAAAAAAAAASCAEQAoAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDBlockVariable2" Collapsed="true">
+    <Position X="32.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAECAAAgAAAAQIAAAAAAAAAASCAEQAoAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDComment" Collapsed="true">
+    <Position X="17" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACgACEQAAAACQCQAABIAQAABAAAAAIIAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDConnector" Collapsed="true">
+    <Position X="18.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAAgACEQAQAACQCQIABIAQAgAAEAAAIMAAAAAQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDContinuation" Collapsed="true">
+    <Position X="20.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAgACEQAQAACQCQIABIAQIgAAEAAAIMAAAAAQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDError" Collapsed="true">
+    <Position X="22.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACgACEQAAAACQCQAABIAQAABAAAAAIIAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDInOutVariable" Collapsed="true">
+    <Position X="24" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hQAAgACGQASAACUCxAAJIAQZgpCAEAAIMoAAAAQggAE=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDInVariable" Collapsed="true">
+    <Position X="25.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hEAAgACEQAQAACQCwgAJIAQIgBCAAAAIMISCAEQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDJump" Collapsed="true">
+    <Position X="27.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hQAAgACEQAQAADQCwAAJIAQAgACAAAAINAAAAAQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDLabel" Collapsed="true">
+    <Position X="29.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAAAgACEQAQAADQCwAAJIAQAgACAAAAINAAAAAAAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDOutVariable" Collapsed="true">
+    <Position X="31" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hUAAgACEQAQAACQCwgAJIAQAgBCAAAAIMISCAEQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDReturn" Collapsed="true">
+    <Position X="32.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hQAAgACEQAQAACQCwAAJIAQAgACAAAAIMAAAAAQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDVendorElement" Collapsed="true">
+    <Position X="17" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAAAgAClwAQAAAQC0BAJIAAAgACAAAAIMAAEAAAAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDVendorElementVariable" Collapsed="true">
+    <Position X="18.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAAAAAAAAAAECAAAgAAAAQAAAAAAAAAAASCAEQAoAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDVendorElementVariable1" Collapsed="true">
+    <Position X="20.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAAAAAAAAAAECAAAgAAAAQIAAAAAAAAAASCAEQAoAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyFBDVendorElementVariable2" Collapsed="true">
+    <Position X="22.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAECAAAgAAAAQIAAAAAAAAAASCAEQAoAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyLD" Collapsed="true">
+    <Position X="24" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyLDCoil" Collapsed="true">
+    <Position X="25.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hUAAgACEQAQAACQCwgAJIAQIkACAAAAIMASCAEQEgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyLDContact" Collapsed="true">
+    <Position X="27.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hUAAgACEQAQAACQCwgAJIAQIkACAAAAIMASCAEQEgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyLDLeftPowerRail" Collapsed="true">
+    <Position X="29.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAAAgACEQAQAACQCwAAJIAQIgACAAAAIMAAAAAQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyLDLeftPowerRailConnectionPointOut" Collapsed="true">
+    <Position X="0.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodyLDRightPowerRail" Collapsed="true">
+    <Position X="31" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hQAAgACEQAQAACQCwAAJIAQAgACAAAAIMAAAAAQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFC" Collapsed="true">
+    <Position X="32.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCJumpStep" Collapsed="true">
+    <Position X="17" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hQAAoACEQAQAACQCwAAJIAQAgACABAAIMAAAAAQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCMacroStep" Collapsed="true">
+    <Position X="18.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hQAAgACEQAQAACQCwIAJIAQIgQCEAAAIMAAAACQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCSelectionConvergence" Collapsed="true">
+    <Position X="20.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAAgACEQAQAACQCQAABIAQIgAAAAAAIMAAAAAQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCSelectionConvergenceConnectionPointIn" Collapsed="true">
+    <Position X="8.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCSelectionDivergence" Collapsed="true">
+    <Position X="22.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAAgACEQAQAACQCQAABIAQIgAAAAAAIMAAAAAQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCSelectionDivergenceConnectionPointOut" Collapsed="true">
+    <Position X="9.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCSimultaneousConvergence" Collapsed="true">
+    <Position X="24" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAAgACEQAQAACQCQAABIAQIgAAAAAAIMAAAAAQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCSimultaneousDivergence" Collapsed="true">
+    <Position X="25.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAAgACEQAQAACQCQIABIAQIgAAEAAAIMAAAAAQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCSimultaneousDivergenceConnectionPointOut" Collapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCStep" Collapsed="true">
+    <Position X="27.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hUAAgACEQAQAACQCwoQJIAQIgACEAAAIMAABAAYAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCStepConnectionPointOut" Collapsed="true">
+    <Position X="5.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCStepConnectionPointOutAction" Collapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCTransition" Collapsed="true">
+    <Position X="29.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hQAAgICEQASAACQCwAAJIAQIgACQAAAIcQAAAAQAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCTransitionCondition" Collapsed="true">
+    <Position X="31" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAgAAAAAEAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCTransitionConditionInline" Collapsed="true">
+    <Position X="5.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.bodySFCTransitionConditionReference" Collapsed="true">
+    <Position X="32.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectContentHeader" Collapsed="true">
+    <Position X="25.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQgKEEQADAAAkAAIAAAIAAACAUAAgEIAAgAAAACAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectContentHeaderCoordinateInfo" Collapsed="true">
+    <Position X="27.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAhAAABAAAAAAEAAAAAAAAAIAAAAAABAABE=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectContentHeaderCoordinateInfoPageSize" Collapsed="true">
+    <Position X="18.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAEABgAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectContentHeaderCoordinateInfoFbd" Collapsed="true">
+    <Position X="29.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectContentHeaderCoordinateInfoFbdScaling" Collapsed="true">
+    <Position X="31" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAEABgAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectContentHeaderCoordinateInfoLD" Collapsed="true">
+    <Position X="32.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectContentHeaderCoordinateInfoLDScaling" Collapsed="true">
+    <Position X="17" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAEABgAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectContentHeaderCoordinateInfoSfc" Collapsed="true">
+    <Position X="20.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectContentHeaderCoordinateInfoSfcScaling" Collapsed="true">
+    <Position X="22.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAEABgAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.addDataInfoInfo" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACAgAABAAAAAIIAAAgAAAEAEAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectTypes">
+    <Position X="32.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACAAAAAAAAAAAAAAAAAAAAABAAAAAABAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectTypesDataType" Collapsed="true">
+    <Position X="17" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAQAAIACAAAIACAAQAAAgEAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectTypesPou" Collapsed="true">
+    <Position X="18.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAgACAQAAAACAAAIBAIAQAAQAEACAIAIAAQCAAAAg=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectTypesPouInterface" Collapsed="true">
+    <Position X="22.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAQAAADCAAAAAAAAQAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectTypesPouInterfaceExternalVars" Collapsed="true">
+    <Position X="1" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectTypesPouInterfaceGlobalVars" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectTypesPouInterfaceInOutVars" Collapsed="true">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectTypesPouInterfaceInputVars" Collapsed="true">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectTypesPouInterfaceLocalVars" Collapsed="true">
+    <Position X="10" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectTypesPouInterfaceOutputVars" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectTypesPouInterfaceTempVars" Collapsed="true">
+    <Position X="14.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectTypesPouAction" Collapsed="true">
+    <Position X="20.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAQAAAACAAAIAAAAQAAQAEAAAIAAAAACAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectTypesPouTransition" Collapsed="true">
+    <Position X="24" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAQAAAACAAAIAAAAQAAQAEAAAIAAAAACAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectInstances" Collapsed="true">
+    <Position X="25.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectInstancesConfiguration" Collapsed="true">
+    <Position X="27.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACgACBQAEAACCAAIAEAAQAAAAEgAAIAAIAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectInstancesConfigurationResource" Collapsed="true">
+    <Position X="29.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAiACAQAAAACCAAIAEAAQAAAAEgAAIAAAAAABIAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.IEC61131.projectInstancesConfigurationResourceTask" Collapsed="true">
+    <Position X="31" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAQAQAACCAAIAAABSAAAAEAAAIAQAAAAAIAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="EWSTools.IEC61131.addDataDataHandleUnknown" Collapsed="true">
+    <Position X="18.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAEIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.IEC61131.ItemChoiceType1" Collapsed="true">
+    <Position X="25.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BASEgQAABgFLCAAgAIgAAISAAQocAAACIIEAIAIEACg=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.IEC61131.accessType" Collapsed="true">
+    <Position X="17" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.IEC61131.bodyFBDActionBlockActionQualifier" Collapsed="true">
+    <Position X="20.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAABAAgAAAAAAAAAAAAAACAAABAAAAABBTAAQA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.IEC61131.edgeModifierType" Collapsed="true">
+    <Position X="22.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.IEC61131.storageModifierType" Collapsed="true">
+    <Position X="29.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.IEC61131.ItemChoiceType" Collapsed="true">
+    <Position X="24" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAQAAAAAACAAAAAAAAAAAAAAAAAAIAQ=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.IEC61131.pouType" Collapsed="true">
+    <Position X="27.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Project Objects\IEC61131Project.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

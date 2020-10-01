@@ -1,0 +1,62 @@
+<DrawObjectArgument>
+<Arguments>
+<Argument>
+<Name>a1</Name>
+<Type>BOOL</Type>
+<Reference>Reference</Reference>
+</Argument>
+<Argument>
+<Name>a2</Name>
+<Type>REAL</Type>
+<Reference>Reference</Reference>
+</Argument>
+<Argument>
+<Name>a3</Name>
+<Type>DINT</Type>
+<Reference>Constant</Reference>
+</Argument>
+<Argument>
+<Name>a4</Name>
+<Type>STRING</Type>
+<Reference>Constant</Reference>
+</Argument>
+</Arguments>
+<Expressions>
+<Expression>
+<Field>
+<FieldName>BoarderWidth</FieldName>
+<FieldType>DINT</FieldType>
+<FieldConditions>
+<FieldCondition>
+<Condition> a1.VAL = 1</Condition>
+<Value>1</Value>
+<Condition> a2.VAL = 2</Condition>
+<Value>2</Value>
+<Condition> a3.VAL = 5</Condition>
+<Value>3</Value>
+</FieldCondition>
+</FieldConditions>
+</Field>
+<Field>
+<FieldName>BoarderColor</FieldName>
+<FieldType>Color</FieldType>
+<FieldConditions>
+<FieldCondition>
+<Condition> a1.VAL = 1</Condition>
+<Value>RED</Value>
+<Condition> a2.VAL = 2</Condition>
+<Value>TRANSPARENT</Value>
+</FieldCondition>
+</FieldConditions>
+</Field>
+</Expression>
+</Expressions>
+<Actions>
+<Action>
+<ActionName>MouseDBClick</ActionName>
+<Function> Display(a4) </Function>
+<ActionName>MouseRClick</ActionName>
+<Function> Faceplate(a4) </Function>
+</Action>
+</Actions>
+</DrawObjectArgument>

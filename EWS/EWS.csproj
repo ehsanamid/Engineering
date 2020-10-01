@@ -1,0 +1,1534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C2F951D8-2CB6-4AB5-9029-1EE3FCDB910A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DCS</RootNamespace>
+    <AssemblyName>DCS</AssemblyName>
+    <StartupObject>DocToolkit.DCSProgram</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EWSAPP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;EWSAPP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.105.2, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\System.Data.SQLite\2015\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.105.2, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\System.Data.SQLite\2015\bin\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoComplete\AutocompleteItem.cs" />
+    <Compile Include="AutoComplete\AutocompleteItems.cs" />
+    <Compile Include="AutoComplete\AutocompleteListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AutoComplete\AutocompleteMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AutoComplete\AutocompleteMenuHost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AutoComplete\EventArgs.cs" />
+    <Compile Include="AutoComplete\IAutocompleteListView.cs" />
+    <Compile Include="AutoComplete\ITextBoxWrapper.cs" />
+    <Compile Include="AutoComplete\Range.cs" />
+    <Compile Include="AutoComplete\TagObject.cs" />
+    <Compile Include="AutoComplete\TextBoxWrapper.cs" />
+    <Compile Include="Compiler\TICInstruction.cs" />
+    <Compile Include="Compiler\Operation\AssignmentOperation.cs" />
+    <Compile Include="Compiler\Collection\CConstantCollection.cs" />
+    <Compile Include="Compiler\Collection\CStringCollection.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="CommandAdd.cs" />
+    <Compile Include="CommandChangeState.cs" />
+    <Compile Include="CommandDelete.cs" />
+    <Compile Include="CommandDeleteAll.cs" />
+    <Compile Include="Com.cs" />
+    <Compile Include="DCSTables\SQLiteTable.cs" />
+    <Compile Include="DCSTables\tblAlarm.cs" />
+    <Compile Include="DCSTables\tblAlarmGroup.cs" />
+    <Compile Include="DCSTables\tblBlockAlarmStatusText.cs" />
+    <Compile Include="DCSTables\tblBlockModeText.cs" />
+    <Compile Include="DCSTables\tblBlockStateText.cs" />
+    <Compile Include="DCSTables\tblCurve.cs" />
+    <Compile Include="DCSTables\tblEquipment.cs" />
+    <Compile Include="DCSTables\tblEWSUser.cs" />
+    <Compile Include="DCSTables\tblFBDAlarmOrder.cs" />
+    <Compile Include="DCSTables\tblInstrumentUnits.cs" />
+    <Compile Include="DCSTables\tblInstrumentUnitsGrp.cs" />
+    <Compile Include="DCSTables\tblPlantStructure.cs" />
+    <Compile Include="DCSTables\tblPlantStructureObject.cs" />
+    <Compile Include="DCSTables\tblPlantStructureProperty.cs" />
+    <Compile Include="DCSTables\tblPolygon.cs" />
+    <Compile Include="Draw\ClipBoardManager.cs" />
+    <Compile Include="Draw\DrawExpressions.cs" />
+    <Compile Include="Draw\GraphicalObject.cs" />
+    <Compile Include="Draw\ToolCurve.cs" />
+    <Compile Include="Draw\DrawPolygon.cs" />
+    <Compile Include="Draw\ShapeFill.cs" />
+    <Compile Include="Draw\ShapeOutline.cs" />
+    <Compile Include="Draw\ToolPolygon.cs" />
+    <Compile Include="DummyDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DummyDoc.Designer.cs">
+      <DependentUpon>DummyDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DummyOutputWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DummyOutputWindow.Designer.cs">
+      <DependentUpon>DummyOutputWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DummyPropertyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DummyPropertyWindow.Designer.cs" />
+    <Compile Include="DummyPropertyWindow1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DummyPropertyWindow.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DummySolutionExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DummySolutionExplorer.Designer.cs" />
+    <Compile Include="DummySolutionExplorer1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DummySolutionExplorer.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DummyTaskList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DummyTaskList.Designer.cs">
+      <DependentUpon>DummyTaskList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EWSCommon.cs" />
+    <Compile Include="Compiler\Compiler.cs" />
+    <Compile Include="Compiler\Operation\CaseOperation.cs" />
+    <Compile Include="Compiler\Operation\ForOperation.cs" />
+    <Compile Include="Compiler\Operation\FunctionBlockCallOperation.cs" />
+    <Compile Include="Compiler\Operation\FunctionCallOperation.cs" />
+    <Compile Include="Compiler\Operation\IfOperation.cs" />
+    <Compile Include="Compiler\Operation\SimpleOperation.cs" />
+    <Compile Include="Compiler\Operation\WhileOperation.cs" />
+    <Compile Include="Compiler\StructureFile.cs" />
+    <Compile Include="Compiler\Token\CTokenFBDPin.cs" />
+    <Compile Include="Compiler\Token\CToken.cs" />
+    <Compile Include="Compiler\Token\CTokenFunctionBlockInstance.cs" />
+    <Compile Include="Compiler\Token\CTokenFunction.cs" />
+    <Compile Include="Compiler\Token\CTokenFunctionEX.cs" />
+    <Compile Include="Compiler\Token\CTokenFunctionEXInstance.cs" />
+    <Compile Include="Compiler\Token\CTokenFunctionInstance.cs" />
+    <Compile Include="Compiler\Token\CTokenOperand.cs" />
+    <Compile Include="Compiler\Token\CTokenOperator.cs" />
+    <Compile Include="Compiler\Token\CTokenTempVariable.cs" />
+    <Compile Include="Compiler\Token\CTokenValue.cs" />
+    <Compile Include="Compiler\Token\CTokenVariable.cs" />
+    <Compile Include="ControlExtenders\DockExtender.cs" />
+    <Compile Include="ControlExtenders\Floaty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlExtenders\Overlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DCSTables\tblBOOL.cs" />
+    <Compile Include="DCSTables\tblDINT.cs" />
+    <Compile Include="DCSTables\tblFBDBlock.cs" />
+    <Compile Include="DCSTables\tblFBDPinConnection.cs" />
+    <Compile Include="DCSTables\tblREAL.cs" />
+    <Compile Include="DCSTables\tblSymbolADText.cs" />
+    <Compile Include="DCSTables\tblSymbolBitmap.cs" />
+    <Compile Include="DCSTables\tblSymbolLine.cs" />
+    <Compile Include="DCSTables\tblSymbolPointsPolyline.cs" />
+    <Compile Include="DCSTables\tblSymbolPolyline.cs" />
+    <Compile Include="DCSTables\tblSymbolRect.cs" />
+    <Compile Include="DCSTables\tblSymbolStatus.cs" />
+    <Compile Include="Draw\FBD\ToolConstant.cs" />
+    <Compile Include="Draw\FBD\DrawFunctionEx.cs" />
+    <Compile Include="Draw\FBD\DrawFunction.cs" />
+    <Compile Include="Draw\FBD\DrawFunctionBlock.cs" />
+    <Compile Include="Draw\FBD\DrawVariable.cs" />
+    <Compile Include="Draw\DrawCurve.cs" />
+    <Compile Include="Draw\DrawGraphic.cs" />
+    <Compile Include="Draw\FBD\DrawLogic.cs" />
+    <Compile Include="EWSCommon1.cs" />
+    <Compile Include="EWSCommon2.cs" />
+    <Compile Include="EWSCommon3.cs" />
+    <Compile Include="Forms\AddUDPouForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddUDPouForm.Designer.cs">
+      <DependentUpon>AddUDPouForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GraphicalObjectExpressionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GraphicalObjectExpressionForm.Designer.cs">
+      <DependentUpon>GraphicalObjectExpressionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlantStructureObjectTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlantStructureObjectTypeForm.Designer.cs">
+      <DependentUpon>PlantStructureObjectTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlantStructureFolderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlantStructureFolderForm.Designer.cs">
+      <DependentUpon>PlantStructureFolderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlantStructurePropertyTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlantStructurePropertyTypeForm.Designer.cs">
+      <DependentUpon>PlantStructurePropertyTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlantStructurePropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlantStructurePropertyForm.Designer.cs">
+      <DependentUpon>PlantStructurePropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EWSTemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EWSTemplateForm.Designer.cs">
+      <DependentUpon>EWSTemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormImEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormImEx.Designer.cs">
+      <DependentUpon>FormImEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LCUSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LCUSelectForm.Designer.cs">
+      <DependentUpon>LCUSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlantStructureObjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlantStructureObjectForm.Designer.cs">
+      <DependentUpon>PlantStructureObjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UDFPinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UDFPinForm.Designer.cs">
+      <DependentUpon>UDFPinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Controls\ErrorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Left Controls\ErrorWindow.Designer.cs">
+      <DependentUpon>ErrorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\partial.tblEWSUser.cs" />
+    <Compile Include="Partial\partial.tblPlantStructureObject.cs" />
+    <Compile Include="Partial\partial.tblPlantStructureProperty.cs" />
+    <Compile Include="Project Objects\DisplayObjectEventHandlers.cs" />
+    <Compile Include="Project Objects\DisplayObjectDynamicProperty.cs" />
+    <Compile Include="Project Objects\DisplayObjectParameters.cs" />
+    <Compile Include="Project Objects\SerializeDeserialize.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TableObject\AlarmObject.cs" />
+    <Compile Include="TableObject\DisplayObject.cs" />
+    <Compile Include="TableObject\POUObject.cs" />
+    <Compile Include="TableObject\VariableGrid.cs" />
+    <Compile Include="TabPages\TabPlantStructurePageControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CrossReference.cs" />
+    <Compile Include="Tools\ExpressionBuilder.cs" />
+    <Compile Include="Tools\Filter.cs" />
+    <Compile Include="Forms\AlarmFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlarmFrm.Designer.cs">
+      <DependentUpon>AlarmFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AlarmGroupFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlarmGroupFrm.Designer.cs">
+      <DependentUpon>AlarmGroupFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AreaSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AreaSelectForm.Designer.cs">
+      <DependentUpon>AreaSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AlarmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlarmForm.Designer.cs">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlantstructureSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlantstructureSelectForm.Designer.cs">
+      <DependentUpon>PlantstructureSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectVar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectVar.Designer.cs">
+      <DependentUpon>SelectVar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Copy of VariablesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Copy of VariablesList.Designer.cs">
+      <DependentUpon>Copy of VariablesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FBDProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FBDProperty.Designer.cs">
+      <DependentUpon>FBDProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OtherControls.cs" />
+    <Compile Include="Forms\ShapeFillfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShapeFillfrm.Designer.cs">
+      <DependentUpon>ShapeFillfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShapeOutlinefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShapeOutlinefrm.Designer.cs">
+      <DependentUpon>ShapeOutlinefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VariableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VariableForm.Designer.cs">
+      <DependentUpon>VariableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VariableFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VariableFilter.Designer.cs">
+      <DependentUpon>VariableFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Controls\ReportExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Left Controls\ReportExplorer.Designer.cs">
+      <DependentUpon>ReportExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Controls\StructureExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Left Controls\StructureExplorer.Designer.cs">
+      <DependentUpon>StructureExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Controls\UserExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Left Controls\UserExplorer.Designer.cs">
+      <DependentUpon>UserExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Controls\SymbolExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Left Controls\SymbolExplorer.Designer.cs">
+      <DependentUpon>SymbolExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Controls\DisplayExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Left Controls\DisplayExplorer.Designer.cs">
+      <DependentUpon>DisplayExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Controls\SystemExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Left Controls\SystemExplorer.Designer.cs">
+      <DependentUpon>SystemExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Controls\LayerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Left Controls\LayerWindow.Designer.cs">
+      <DependentUpon>LayerWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Controls\LogicExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Left Controls\LogicExplorer.Designer.cs">
+      <DependentUpon>LogicExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Controls\OutputWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Left Controls\OutputWindow.Designer.cs">
+      <DependentUpon>OutputWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Controls\PropertyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Left Controls\PropertyWindow.Designer.cs">
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Controls\ToolboxWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Left Controls\ToolboxWindow.Designer.cs">
+      <DependentUpon>ToolboxWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\Networking.cs" />
+    <Compile Include="Tools\ColorCombo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\ColorCombo.Designer.cs">
+      <DependentUpon>ColorCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\FilteredPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\FilteredPropertyGrid.Designer.cs">
+      <DependentUpon>FilteredPropertyGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ImportExport.cs" />
+    <Compile Include="Tools\linenum_rtf.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\ShapeBrush.cs" />
+    <Compile Include="Tools\StyleList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\StyleList.Designer.cs">
+      <DependentUpon>StyleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\partial.tblCurve.cs" />
+    <Compile Include="Partial\partial.tblPolygon.cs" />
+    <Compile Include="TabPages\TabFBDPageControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabPages\TabGraphicPageControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabPages\TabPageControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabPages\TabPageGridAlarmGroupControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabPages\TabTextPageControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabPages\TabVariableGridPageControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabPages\TabGridPageControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabPages\TabSTPageControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabPages\TabDisplayPageControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\StructBytes.cs" />
+    <Compile Include="TabPages\PageList.cs" />
+    <Compile Include="TabPages\TabSFCPageControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainEWSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainEWSForm.Designer.cs">
+      <DependentUpon>MainEWSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\CommonDB.cs" />
+    <Compile Include="Partial\partial.tblADText.cs" />
+    <Compile Include="Partial\partial.tblAlarm.cs" />
+    <Compile Include="Partial\partial.tblAlarmGroup.cs" />
+    <Compile Include="Partial\partial.tblBlockAlarmStatusText.cs" />
+    <Compile Include="Partial\partial.tblBargraph.cs" />
+    <Compile Include="Partial\partial.tblBias.cs" />
+    <Compile Include="Partial\partial.tblBitmap.cs" />
+    <Compile Include="Partial\partial.tblBlock.cs" />
+    <Compile Include="Partial\partial.tblBlockModeText.cs" />
+    <Compile Include="Partial\partial.tblBlockStateText.cs" />
+    <Compile Include="Partial\partial.tblBoard.cs" />
+    <Compile Include="Partial\partial.tblBoardType.cs" />
+    <Compile Include="Partial\partial.tblBOOL.cs" />
+    <Compile Include="Partial\partial.tblButton.cs" />
+    <Compile Include="Partial\partial.tblChannel.cs" />
+    <Compile Include="Partial\partial.tblDINT.cs" />
+    <Compile Include="Partial\partial.tblDisplay.cs" />
+    <Compile Include="Partial\partial.tblEditBox.cs" />
+    <Compile Include="Partial\partial.tblEllipse.cs" />
+    <Compile Include="Partial\partial.tblEquipment.cs" />
+    <Compile Include="Partial\partial.tblFBDAlarmOrder.cs" />
+    <Compile Include="Partial\partial.tblFBDBlock.cs" />
+    <Compile Include="Partial\partial.tblFBDPinConnection.cs" />
+    <Compile Include="Partial\partial.tblFP_Parameter.cs" />
+    <Compile Include="Partial\partial.tblFP_Types.cs" />
+    <Compile Include="Partial\partial.tblHMI.cs" />
+    <Compile Include="Partial\partial.tblILCPoint.cs" />
+    <Compile Include="Partial\partial.tblInstrumentUnits.cs" />
+    <Compile Include="Partial\partial.tblInstrumentUnitsGrp.cs" />
+    <Compile Include="Partial\partial.tblLine.cs" />
+    <Compile Include="Partial\partial.tblMeter.cs" />
+    <Compile Include="Partial\partial.tblModbusClient.cs" />
+    <Compile Include="Partial\partial.tblModbusClientData.cs" />
+    <Compile Include="Partial\partial.tblModbusClientMap.cs" />
+    <Compile Include="Partial\partial.tblModbusServer.cs" />
+    <Compile Include="Partial\partial.tblModbusServerData.cs" />
+    <Compile Include="Partial\partial.tblModbusServerDataGroup.cs" />
+    <Compile Include="Partial\partial.tblModbusServerPoint.cs" />
+    <Compile Include="Partial\partial.tblNavigation.cs" />
+    <Compile Include="Partial\partial.tblPlantStructure.cs" />
+    <Compile Include="Partial\partial.tblPolyline.cs" />
+    <Compile Include="Partial\partial.tblREAL.cs" />
+    <Compile Include="Partial\partial.tblRect.cs" />
+    <Compile Include="Partial\partial.tblSolution.cs" />
+    <Compile Include="Partial\partial.tblSTDB.cs" />
+    <Compile Include="Partial\partial.tblSymbolADText.cs" />
+    <Compile Include="Partial\partial.tblSymbolBitmap.cs" />
+    <Compile Include="Partial\partial.tblSymbolLine.cs" />
+    <Compile Include="Partial\partial.tblSymbolPointsPolyline.cs" />
+    <Compile Include="Partial\partial.tblSymbolPolyline.cs" />
+    <Compile Include="Partial\partial.tblSymbolRect.cs" />
+    <Compile Include="Partial\partial.tblSymbols.cs" />
+    <Compile Include="Partial\partial.tblSymbolStatus.cs" />
+    <Compile Include="Partial\partial.tblText.cs" />
+    <Compile Include="Partial\partial.tblTrend.cs" />
+    <Compile Include="Partial\partial.tblUser.cs" />
+    <Compile Include="Partial\partial.tblUserAccess.cs" />
+    <Compile Include="Partial\partial.tblUserGroup.cs" />
+    <Compile Include="Partial\Global.cs" />
+    <Compile Include="Partial\partial.tblController.cs" />
+    <Compile Include="Partial\partial.tblFormalParameter.cs" />
+    <Compile Include="Partial\partial.tblFunction.cs" />
+    <Compile Include="Partial\partial.tblPou.cs" />
+    <Compile Include="Partial\partial.tblVariable.cs" />
+    <Compile Include="DCSTables\tblADText.cs" />
+    <Compile Include="DCSTables\tblBargraph.cs" />
+    <Compile Include="DCSTables\tblBias.cs" />
+    <Compile Include="DCSTables\tblBitmap.cs" />
+    <Compile Include="DCSTables\tblBlock.cs" />
+    <Compile Include="DCSTables\tblBoard.cs" />
+    <Compile Include="DCSTables\tblBoardType.cs" />
+    <Compile Include="DCSTables\tblButton.cs" />
+    <Compile Include="DCSTables\tblChannel.cs" />
+    <Compile Include="DCSTables\tblController.cs" />
+    <Compile Include="DCSTables\tblDisplay.cs" />
+    <Compile Include="DCSTables\tblEditBox.cs" />
+    <Compile Include="DCSTables\tblEllipse.cs" />
+    <Compile Include="DCSTables\tblFormalParameter.cs" />
+    <Compile Include="DCSTables\tblFP_Parameter.cs" />
+    <Compile Include="DCSTables\tblFP_Types.cs" />
+    <Compile Include="DCSTables\tblFunction.cs" />
+    <Compile Include="DCSTables\tblHMI.cs" />
+    <Compile Include="DCSTables\tblILCPoint.cs" />
+    <Compile Include="DCSTables\tblLine.cs" />
+    <Compile Include="DCSTables\tblMeter.cs" />
+    <Compile Include="DCSTables\tblModbusClient.cs" />
+    <Compile Include="DCSTables\tblModbusClientData.cs" />
+    <Compile Include="DCSTables\tblModbusClientMap.cs" />
+    <Compile Include="DCSTables\tblModbusServer.cs" />
+    <Compile Include="DCSTables\tblModbusServerData.cs" />
+    <Compile Include="DCSTables\tblModbusServerDataGroup.cs" />
+    <Compile Include="DCSTables\tblModbusServerPoint.cs" />
+    <Compile Include="DCSTables\tblNavigation.cs" />
+    <Compile Include="DCSTables\tblPolyline.cs" />
+    <Compile Include="DCSTables\tblPou.cs" />
+    <Compile Include="DCSTables\tblRect.cs" />
+    <Compile Include="DCSTables\tblSolution.cs" />
+    <Compile Include="DCSTables\tblSTDB.cs" />
+    <Compile Include="DCSTables\tblSymbols.cs" />
+    <Compile Include="DCSTables\tblText.cs" />
+    <Compile Include="DCSTables\tblTrend.cs" />
+    <Compile Include="DCSTables\tblUser.cs" />
+    <Compile Include="DCSTables\tblUserAccess.cs" />
+    <Compile Include="DCSTables\tblUserGroup.cs" />
+    <Compile Include="DCSTables\tblVariable.cs" />
+    <Compile Include="EWSTreeNode.cs" />
+    <Compile Include="Forms\AddNewProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddNewProgram.Designer.cs">
+      <DependentUpon>AddNewProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddPOU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddPOU.Designer.cs">
+      <DependentUpon>AddPOU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomTextFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomTextFilter.Designer.cs">
+      <DependentUpon>CustomTextFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddVariableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddVariableForm.Designer.cs">
+      <DependentUpon>AddVariableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VarListFilterfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VarListFilterfrm.Designer.cs">
+      <DependentUpon>VarListFilterfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\FBD\FBDObjects.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Project Objects\ftp.cs" />
+    <Compile Include="Project Objects\ModifyRegistry.cs" />
+    <Compile Include="Properties\Strings.Designer.cs" />
+    <Compile Include="DockControls\VarList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockControls\VarList.designer.cs">
+      <DependentUpon>VarList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\FBD\DrawFBDBox.cs" />
+    <Compile Include="Draw\FBD\DrawWire.cs" />
+    <Compile Include="Draw\FBD\ToolFunction.cs" />
+    <Compile Include="Draw\FBD\ToolVariable.cs" />
+    <Compile Include="Draw\FBD\ToolWire.cs" />
+    <Compile Include="Tools\ObjectWrapper.cs" />
+    <Compile Include="ToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolWindow.Designer.cs">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TriStateCheckBoxTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TypeConverters\AlarmCollectionTypeConverter.cs" />
+    <Compile Include="TypeConverters\AlarmGroupTypeConverter.cs" />
+    <Compile Include="TypeConverters\DrawConverter.cs" />
+    <Compile Include="TypeConverters\NameIDTypeConverter.cs" />
+    <Compile Include="TypeConverters\ImageEditor.cs" />
+    <Compile Include="TypeConverters\PinCollectionTypeConverter.cs" />
+    <Compile Include="TypeConverters\PlantstructureTypeConverter.cs" />
+    <Compile Include="TypeConverters\StringAlignmentConverter.cs" />
+    <Compile Include="VS2012ColorTable.cs" />
+    <Compile Include="VS2012ToolStripRenderer.cs" />
+    <Compile Include="VS2013ColorTable.cs" />
+    <Compile Include="VS2013ToolStripRenderer.cs" />
+    <Compile Include="VSToolStripExtender.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VSToolStripExtender.Designer.cs" />
+    <Compile Include="Forms\InsertFBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsertFBD.Designer.cs">
+      <DependentUpon>InsertFBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectBoard.Designer.cs">
+      <DependentUpon>SelectBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectXMLSerializer.cs" />
+    <Compile Include="Draw\DrawArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Draw\DrawArea.Designer.cs">
+      <DependentUpon>DrawArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\DrawEllipse.cs" />
+    <Compile Include="Draw\DrawImage.cs" />
+    <Compile Include="Draw\DrawingPens.cs" />
+    <Compile Include="Draw\DrawLine.cs" />
+    <Compile Include="Draw\DrawObject.cs" />
+    <Compile Include="Draw\DrawPolyLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Draw\DrawRectangle.cs" />
+    <Compile Include="Draw\DrawText.cs" />
+    <Compile Include="Explorer.cs" />
+    <Compile Include="FillBrushes.cs" />
+    <Compile Include="Forms\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\GraphicsList.cs" />
+    <Compile Include="GraphicsProperties.cs" />
+    <Compile Include="Forms\OpenProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OpenProjectForm.Designer.cs">
+      <DependentUpon>OpenProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="DCSSolution.cs" />
+    <Compile Include="Forms\PropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PropertiesDialog.Designer.cs">
+      <DependentUpon>PropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Objects\IEC61131Project.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DummyDoc.resx">
+      <DependentUpon>DummyDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DummyOutputWindow.resx">
+      <DependentUpon>DummyOutputWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DummyPropertyWindow.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DummyPropertyWindow1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DummySolutionExplorer.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DummySolutionExplorer1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DummyTaskList.resx">
+      <DependentUpon>DummyTaskList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AlarmFrm.resx">
+      <DependentUpon>AlarmFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AlarmGroupFrm.resx">
+      <DependentUpon>AlarmGroupFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AreaSelectForm.resx">
+      <DependentUpon>AreaSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AlarmForm.resx">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddUDPouForm.resx">
+      <DependentUpon>AddUDPouForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GraphicalObjectExpressionForm.resx">
+      <DependentUpon>GraphicalObjectExpressionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlantStructureObjectTypeForm.resx">
+      <DependentUpon>PlantStructureObjectTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlantStructureFolderForm.resx">
+      <DependentUpon>PlantStructureFolderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlantStructurePropertyTypeForm.resx">
+      <DependentUpon>PlantStructurePropertyTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlantStructurePropertyForm.resx">
+      <DependentUpon>PlantStructurePropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EWSTemplateForm.resx">
+      <DependentUpon>EWSTemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormImEx.resx">
+      <DependentUpon>FormImEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LCUSelectForm.resx">
+      <DependentUpon>LCUSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlantStructureObjectForm.resx">
+      <DependentUpon>PlantStructureObjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlantstructureSelectForm.resx">
+      <DependentUpon>PlantstructureSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectVar.resx">
+      <DependentUpon>SelectVar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Copy of VariablesList.resx">
+      <DependentUpon>Copy of VariablesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FBDProperty.resx">
+      <DependentUpon>FBDProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShapeFillfrm.resx">
+      <DependentUpon>ShapeFillfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShapeOutlinefrm.resx">
+      <DependentUpon>ShapeOutlinefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UDFPinForm.resx">
+      <DependentUpon>UDFPinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VariableForm.resx">
+      <DependentUpon>VariableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VariableFilter.resx">
+      <DependentUpon>VariableFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Controls\ErrorWindow.resx">
+      <DependentUpon>ErrorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Controls\ReportExplorer.resx">
+      <DependentUpon>ReportExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Controls\StructureExplorer.resx">
+      <DependentUpon>StructureExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Controls\UserExplorer.resx">
+      <DependentUpon>UserExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Controls\SymbolExplorer.resx">
+      <DependentUpon>SymbolExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Controls\DisplayExplorer.resx">
+      <DependentUpon>DisplayExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Controls\SystemExplorer.resx">
+      <DependentUpon>SystemExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Controls\LayerWindow.resx">
+      <DependentUpon>LayerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Controls\LogicExplorer.resx">
+      <DependentUpon>LogicExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Controls\OutputWindow.resx">
+      <DependentUpon>OutputWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Controls\PropertyWindow.resx">
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Controls\ToolboxWindow.resx">
+      <DependentUpon>ToolboxWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TabPlantStructurePageControl.resx">
+      <DependentUpon>TabPlantStructurePageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ColorCombo.resx">
+      <DependentUpon>ColorCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\StyleList.resx">
+      <DependentUpon>StyleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TabFBDPageControl.resx">
+      <DependentUpon>TabFBDPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TabGraphicPageControl.resx">
+      <DependentUpon>TabGraphicPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TabPageControl.resx">
+      <DependentUpon>TabPageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TabPageGridAlarmGroupControl.resx">
+      <DependentUpon>TabPageGridAlarmGroupControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TabTextPageControl.resx">
+      <DependentUpon>TabTextPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TabVariableGridPageControl.resx">
+      <DependentUpon>TabVariableGridPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TabGridPageControl.resx">
+      <DependentUpon>TabGridPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TabSTPageControl.resx">
+      <DependentUpon>TabSTPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TabDisplayPageControl.resx">
+      <DependentUpon>TabDisplayPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TabSFCPageControl.resx">
+      <DependentUpon>TabSFCPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddNewProgram.resx">
+      <DependentUpon>AddNewProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddPOU.resx">
+      <DependentUpon>AddPOU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomTextFilter.resx">
+      <DependentUpon>CustomTextFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainEWSForm.resx">
+      <DependentUpon>MainEWSForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddVariableForm.resx">
+      <DependentUpon>AddVariableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VarListFilterfrm.resx">
+      <DependentUpon>VarListFilterfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Strings.resx" />
+    <EmbeddedResource Include="DockControls\VarList.resx">
+      <DependentUpon>VarList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Draw\DrawArea.resx">
+      <DependentUpon>DrawArea.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsertFBD.resx">
+      <DependentUpon>InsertFBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OpenProjectForm.resx">
+      <DependentUpon>OpenProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PropertiesDialog.resx">
+      <DependentUpon>PropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectBoard.resx">
+      <DependentUpon>SelectBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram11.cd" />
+    <None Include="ClassDiagram12.cd" />
+    <None Include="ClassDiagram13.cd" />
+    <None Include="ClassDiagram14.cd" />
+    <None Include="ClassDiagram15.cd" />
+    <None Include="TabPages\ClassDiagramTabPages.cd" />
+    <None Include="Compiler\Operation\Operation.cd" />
+    <None Include="ClassDiagram\ClassDiagram1.cd" />
+    <None Include="ClassDiagram\ClassDiagram8.cd" />
+    <None Include="ClassDiagram\ClassDiagram9.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Forms\TextDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TextDialog.Designer.cs">
+      <DependentUpon>TextDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\Tool.cs" />
+    <Compile Include="Draw\ToolEllipse.cs" />
+    <Compile Include="Draw\ToolImage.cs" />
+    <Compile Include="Draw\ToolLine.cs" />
+    <Compile Include="Draw\ToolObject.cs" />
+    <Compile Include="Draw\ToolPointer.cs" />
+    <Compile Include="Draw\ToolPolyLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Draw\ToolRectangle.cs" />
+    <Compile Include="Draw\ToolText.cs" />
+    <Compile Include="UndoManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Text.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolWindow.resx">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WireL.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wire.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\cursor1.cur">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\cursor_undo.cur">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\pencil %282%29.cur">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PolyHandle.cur">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rectangle.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TextTool.cur">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\WireL.cur">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FB16.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Function16.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Line.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ellipse.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pencil.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FB.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Function.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Variable.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="close11.png" />
+    <Content Include="close3.png" />
+    <EmbeddedResource Include="Constant.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="constants.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Polygon.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Polyline.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copy of Polyline.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copy %282%29 of Polyline.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Ellipse.png" />
+    <EmbeddedResource Include="PolyHandle.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="refresh.png" />
+    <None Include="Resources\LeftTop.bmp" />
+    <None Include="Resources\LeftCenter.bmp" />
+    <None Include="Resources\LeftBottom.bmp" />
+    <None Include="Resources\CenterTop.bmp" />
+    <None Include="Resources\CenterCenter.bmp" />
+    <None Include="Resources\CenterBottom.bmp" />
+    <None Include="Resources\RightTop.bmp" />
+    <None Include="Resources\RightCenter.bmp" />
+    <None Include="Resources\RightBottom.bmp" />
+    <Content Include="Resources\010.png" />
+    <Content Include="Resources\011.png" />
+    <Content Include="Resources\012.png" />
+    <Content Include="Resources\1425497189_9450.ico" />
+    <Content Include="Resources\1425497206_37070.ico" />
+    <Content Include="Resources\1425497630_compfile.png" />
+    <Content Include="Resources\1425497649_18595.ico" />
+    <Content Include="Resources\1425497652_compfile.png" />
+    <Content Include="Resources\1425497793_92606.ico" />
+    <Content Include="Resources\1425497834_93849.ico" />
+    <Content Include="Resources\1425498037_compile-warning.png" />
+    <Content Include="Resources\1425498041_25984.ico" />
+    <Content Include="Resources\1425498252_stock_compile-16.png" />
+    <Content Include="Resources\Add.png" />
+    <Content Include="Resources\add_block.png" />
+    <Content Include="Resources\add_comment.png" />
+    <Content Include="Resources\add_connection.png" />
+    <Content Include="Resources\add_variable.png" />
+    <Content Include="Resources\add_wire.png" />
+    <Content Include="Resources\AI.bmp" />
+    <Content Include="Resources\align-bottom.png" />
+    <Content Include="Resources\align-center.png" />
+    <Content Include="Resources\align-horizontal-bottom-out.png" />
+    <Content Include="Resources\align-horizontal-center-2.png" />
+    <Content Include="Resources\align-horizontal-left-out.png" />
+    <Content Include="Resources\align-horizontal-left.png" />
+    <Content Include="Resources\align-horizontal-right-2.png" />
+    <Content Include="Resources\align-horizontal-right-out.png" />
+    <Content Include="Resources\align-horizontal-top-out.png" />
+    <Content Include="Resources\align-left.png" />
+    <Content Include="Resources\align-middle.png" />
+    <Content Include="Resources\align-right.png" />
+    <Content Include="Resources\align-top.png" />
+    <Content Include="Resources\align-vertical-bottom-2.png" />
+    <Content Include="Resources\align-vertical-bottom-out.png" />
+    <Content Include="Resources\align-vertical-center-2.png" />
+    <Content Include="Resources\align-vertical-top-2.png" />
+    <Content Include="Resources\align-vertical-top-out.png" />
+    <Content Include="Resources\AnalogText.ico" />
+    <Content Include="Resources\AO.bmp" />
+    <Content Include="Resources\Apps-preferences-kcalc-constants-icon %281%29.png" />
+    <Content Include="Resources\Apps-preferences-kcalc-constants-icon %282%29.png" />
+    <Content Include="Resources\Arc.ico" />
+    <Content Include="Resources\Area.png" />
+    <Content Include="Resources\Arrow.ico" />
+    <Content Include="Resources\arrow_down.png" />
+    <Content Include="Resources\Bargraph.ico" />
+    <Content Include="Resources\Bitmap.ico" />
+    <Content Include="Resources\Bitmap1.bmp" />
+    <Content Include="Resources\BLOCK %282%29.png" />
+    <Content Include="Resources\block-delete.png" />
+    <Content Include="Resources\block-edit.png" />
+    <Content Include="Resources\block-go.png" />
+    <Content Include="Resources\block-link.png" />
+    <Content Include="Resources\Block.ico" />
+    <Content Include="Resources\block.png" />
+    <Content Include="Resources\Button.ico" />
+    <Content Include="Resources\CheckBoxItem.ico" />
+    <Content Include="Resources\ClearFilter.png" />
+    <Content Include="Resources\ComboBox.ico" />
+    <Content Include="Resources\COMMENT.png" />
+    <Content Include="Resources\Compass.png" />
+    <Content Include="Resources\Compile 22.ico" />
+    <Content Include="Resources\Compile 22.png" />
+    <Content Include="Resources\Compile All 22.ico" />
+    <Content Include="Resources\compile all.png" />
+    <Content Include="Resources\Compile.png" />
+    <EmbeddedResource Include="Resources\constants.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\down.bmp" />
+    <Content Include="Resources\CONFIGURATIONS.png" />
+    <Content Include="Resources\configure-toolbars.png" />
+    <Content Include="Resources\Controller.png" />
+    <Content Include="Resources\database-table.png" />
+    <Content Include="Resources\DATATYPES.png" />
+    <Content Include="Resources\del.gif" />
+    <Content Include="Resources\del.png" />
+    <Content Include="Resources\del1.png" />
+    <Content Include="Resources\DI.bmp" />
+    <Content Include="Resources\DigitalText.ico" />
+    <Content Include="Resources\DISP.PNG" />
+    <Content Include="Resources\Display-add.png" />
+    <Content Include="Resources\Display-delete.png" />
+    <Content Include="Resources\Display-edit.png" />
+    <Content Include="Resources\DISPSel.png" />
+    <Content Include="Resources\distribute-horizontal-center.png" />
+    <Content Include="Resources\distribute-horizontal-equal.png" />
+    <Content Include="Resources\distribute-horizontal-left.png" />
+    <Content Include="Resources\distribute-horizontal-margin.png" />
+    <Content Include="Resources\distribute-horizontal-page.png" />
+    <Content Include="Resources\distribute-horizontal-right.png" />
+    <Content Include="Resources\distribute-horizontal-x.png" />
+    <Content Include="Resources\distribute-vertical-bottom.png" />
+    <Content Include="Resources\distribute-vertical-center.png" />
+    <Content Include="Resources\distribute-vertical-equal.png" />
+    <Content Include="Resources\distribute-vertical-margin.png" />
+    <Content Include="Resources\distribute-vertical-page.png" />
+    <Content Include="Resources\distribute-vertical-top.png" />
+    <Content Include="Resources\distribute-vertical-y.png" />
+    <Content Include="Resources\DO.bmp" />
+    <Content Include="Resources\DockPanel.xml" />
+    <Content Include="Resources\Down.png" />
+    <Content Include="Resources\down1.bmp" />
+    <Content Include="Resources\draw-bezier-curves.png" />
+    <Content Include="Resources\draw-blend-2.png" />
+    <Content Include="Resources\draw-brush.png" />
+    <Content Include="Resources\draw-circle-2.png" />
+    <Content Include="Resources\draw-ellipse-2.png" />
+    <Content Include="Resources\draw-line-2.png" />
+    <Content Include="Resources\draw-line-3.png" />
+    <Content Include="Resources\draw-path.png" />
+    <Content Include="Resources\draw-pie.png" />
+    <Content Include="Resources\draw-polygon-2.png" />
+    <Content Include="Resources\draw-rectangle-2.png" />
+    <Content Include="Resources\draw-text-2.png" />
+    <Content Include="Resources\draw-vector.png" />
+    <Content Include="Resources\drawcli.rc2" />
+    <Content Include="Resources\edit-find-user.png" />
+    <Content Include="Resources\edit-group.png" />
+    <Content Include="Resources\edit-user.png" />
+    <Content Include="Resources\Edit.png" />
+    <Content Include="Resources\EditBox.ico" />
+    <Content Include="Resources\Editbox.png" />
+    <Content Include="Resources\edit_clear.png" />
+    <Content Include="Resources\Ellipse.cur" />
+    <Content Include="Resources\Ellipse.ico" />
+    <Content Include="Resources\Engineering.ico" />
+    <Content Include="Resources\EWSAPP_16.png" />
+    <Content Include="Resources\EWSAPP_22.png" />
+    <Content Include="Resources\EWSAPP_64.ico" />
+    <Content Include="Resources\EWSAPP_64.png" />
+    <Content Include="Resources\F.png" />
+    <Content Include="Resources\Factory.png" />
+    <Content Include="Resources\FactoryD.png" />
+    <Content Include="Resources\FactoryH.png" />
+    <Content Include="Resources\Fatcow-Farm-Fresh-Compile.ico" />
+    <Content Include="Resources\FBD.ico" />
+    <Content Include="Resources\FBDx.ico" />
+    <Content Include="Resources\Filter.png" />
+    <Content Include="Resources\Filtered.png" />
+    <Content Include="Resources\FolderList.png" />
+    <Content Include="Resources\FolderListIcon.png" />
+    <Content Include="Resources\format-line-spacing-normal.ico" />
+    <Content Include="Resources\format-line-spacing-triple.png" />
+    <Content Include="Resources\FUNCTIONBLOCK.png" />
+    <Content Include="Resources\funnel-minus-icon.png" />
+    <Content Include="Resources\funnel-plus-icon.png" />
+    <Content Include="Resources\Graph.ico" />
+    <None Include="Resources\help.png" />
+    <Content Include="Resources\IL.png" />
+    <Content Include="Resources\IOCard.PNG" />
+    <Content Include="Resources\IORack.PNG" />
+    <Content Include="Resources\IStep.png" />
+    <Content Include="Resources\Journal.png" />
+    <Content Include="Resources\JournalIcon.png" />
+    <Content Include="Resources\label.png" />
+    <Content Include="Resources\LCU.png" />
+    <Content Include="Resources\Line.cur" />
+    <Content Include="Resources\Line.ico" />
+    <Content Include="Resources\locations.jpg" />
+    <EmbeddedResource Include="Resources\LogicExplorer_Controller_0.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_Controller_1.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_FBD_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_FBD_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_IL_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_IL_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_LD_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_LD_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_Root_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_Root_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_SFC_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_SFC_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_ST_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_ST_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_UDFB_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_UDFB_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_UDF_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LogicExplorer_UDF_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Resources\Mail.png" />
+    <Content Include="Resources\MailIcon.png" />
+    <Content Include="Resources\Mouse.bmp" />
+    <Content Include="Resources\NewDocumentHS.png" />
+    <Content Include="Resources\Notes.png" />
+    <Content Include="Resources\NotesIcon.png" />
+    <Content Include="Resources\office-chart-line.png" />
+    <Content Include="Resources\openHS.png" />
+    <Content Include="Resources\OWS.png" />
+    <Content Include="Resources\Package.png" />
+    <Content Include="Resources\PCIOCard.PNG" />
+    <Content Include="Resources\pencil %282%29.png" />
+    <Content Include="Resources\Pencil.cur" />
+    <Content Include="Resources\Pie.ico" />
+    <Content Include="Resources\Pie.png" />
+    <Content Include="Resources\Pointer.png" />
+    <Content Include="Resources\Polygon.ico" />
+    <Content Include="Resources\Polyline.ico" />
+    <Content Include="Resources\PrintHS.png" />
+    <Content Include="Resources\prjcls.PNG" />
+    <Content Include="Resources\Program.PNG" />
+    <Content Include="Resources\Project.ico" />
+    <Content Include="Resources\project.png" />
+    <Content Include="Resources\projectControl.png" />
+    <Content Include="Resources\radiobutton-icon.png" />
+    <Content Include="Resources\Rect.ico" />
+    <Content Include="Resources\Report.ico" />
+    <Content Include="Resources\ReportText.ico" />
+    <Content Include="Resources\RoundRect.ico" />
+    <Content Include="Resources\saveHS.png" />
+    <Content Include="Resources\sfc.jpg" />
+    <Content Include="Resources\SFC.png" />
+    <Content Include="Resources\sfgrid.ico" />
+    <Content Include="Resources\shape-group.png" />
+    <Content Include="Resources\shape-handles.png" />
+    <Content Include="Resources\shape-move-back.png" />
+    <Content Include="Resources\shape-move-backwards.png" />
+    <Content Include="Resources\shape-move-forwards.png" />
+    <Content Include="Resources\shape-move-front.png" />
+    <Content Include="Resources\Shortcuts.png" />
+    <Content Include="Resources\ShortcutsIcon.png" />
+    <Content Include="Resources\SINEWAVE%28Small%2816x16%29%29.bmp" />
+    <Content Include="Resources\ST.png" />
+    <Content Include="Resources\Step.png" />
+    <Content Include="Resources\Tasks.png" />
+    <Content Include="Resources\TasksIcon.png" />
+    <Content Include="Resources\Text %282%29.png" />
+    <Content Include="Resources\TextFilter.png" />
+    <Content Include="Resources\TextFilterSel.png" />
+    <Content Include="Resources\ThermometerIcon.bmp" />
+    <Content Include="Resources\Transition.png" />
+    <Content Include="Resources\AND.png" />
+    <Content Include="Resources\ANDUCorner.png" />
+    <Content Include="Resources\ANDDCorner.png" />
+    <Content Include="Resources\OR.png" />
+    <Content Include="Resources\ORUCorner.png" />
+    <Content Include="Resources\ORDCorner.png" />
+    <Content Include="Resources\Jump.png" />
+    <Content Include="Resources\Download Online.png" />
+    <Content Include="Resources\DownloadOffline.png" />
+    <Content Include="Resources\DownloadOnline.png" />
+    <None Include="Resources\moveDown.png" />
+    <None Include="Resources\moveUp.png" />
+    <Content Include="DrawTools.csproj" />
+    <Content Include="Resources\01.png" />
+    <Content Include="Resources\02.png" />
+    <Content Include="Resources\03.png" />
+    <Content Include="Resources\04.png" />
+    <Content Include="Resources\05.png" />
+    <Content Include="Resources\06.png" />
+    <Content Include="Resources\07.png" />
+    <Content Include="Resources\08.png" />
+    <Content Include="Resources\11.png" />
+    <Content Include="Resources\12.png" />
+    <Content Include="Resources\21.png" />
+    <Content Include="Resources\22.png" />
+    <Content Include="Resources\35.png" />
+    <Content Include="Resources\36.png" />
+    <Content Include="Resources\37.png" />
+    <Content Include="Resources\38.png" />
+    <Content Include="Resources\43.png" />
+    <Content Include="Resources\44.png" />
+    <Content Include="Resources\46.png" />
+    <Content Include="Resources\46_1.png" />
+    <Content Include="Resources\about.bmp" />
+    <Content Include="Resources\ArrowDown.bmp" />
+    <Content Include="Resources\ArrowUp.bmp" />
+    <Content Include="Resources\Bottom.bmp" />
+    <Content Include="Resources\BottomLeft.bmp" />
+    <Content Include="Resources\BottomRight.bmp" />
+    <Content Include="Resources\BringToFrontHS.png" />
+    <Content Include="Resources\Brush.png" />
+    <Content Include="Resources\Calendar.png" />
+    <Content Include="Resources\CalendarIcon.png" />
+    <Content Include="Resources\ColorFill.png" />
+    <Content Include="Resources\ColorHS.png" />
+    <Content Include="Resources\Color_font.png" />
+    <Content Include="Resources\Color_fontHS.png" />
+    <Content Include="Resources\Contacts.png" />
+    <Content Include="Resources\ContactsIcon.png" />
+    <Content Include="Resources\Curve.png" />
+    <Content Include="Resources\Edit_RedoHS.png" />
+    <Content Include="Resources\Edit_UndoHS.png" />
+    <Content Include="Resources\Ellipse-Filled.png" />
+    <Content Include="Resources\Ellipse.png" />
+    <Content Include="Resources\Eraser.png" />
+    <Content Include="Resources\EyeDropper.png" />
+    <Content Include="Resources\FontDialogHS.png" />
+    <Content Include="Resources\FontHS.png" />
+    <Content Include="Resources\Hand.png" />
+    <Content Include="Resources\HandR.png" />
+    <Content Include="Resources\InsertPictureHS.png" />
+    <Content Include="Resources\ItalicHS.png" />
+    <Content Include="Resources\Line-Thick.png" />
+    <Content Include="Resources\Line-Thicker.png" />
+    <Content Include="Resources\Line-Thickest.png" />
+    <Content Include="Resources\Line-Thin.png" />
+    <Content Include="Resources\Line-Thinnest.png" />
+    <Content Include="Resources\Line.png" />
+    <Content Include="Resources\LineColorHS.png" />
+    <Content Include="Resources\Pencil.png" />
+    <Content Include="Resources\POINT13.ICO" />
+    <Content Include="Resources\PointerHS.png" />
+    <Content Include="Resources\Polygon.png" />
+    <Content Include="Resources\Rectangle-Filled.png" />
+    <Content Include="Resources\Rectangle.png" />
+    <None Include="Resources\RelationshipsHS.png" />
+    <Content Include="Resources\RotateLeft.png" />
+    <Content Include="Resources\RotateReset.png" />
+    <Content Include="Resources\RotateRight.png" />
+    <Content Include="Resources\Select.png" />
+    <Content Include="Resources\Select2.png" />
+    <Content Include="Resources\SendToBackHS.png" />
+    <Content Include="Resources\Text.png" />
+    <Content Include="Resources\Transparent.png" />
+    <Content Include="Resources\Trash.png" />
+    <Content Include="Resources\Trend.png" />
+    <Content Include="Resources\Triangle.ico" />
+    <Content Include="Resources\Unit.png" />
+    <Content Include="Resources\unknown.png" />
+    <Content Include="Resources\user.png" />
+    <Content Include="Resources\usergroup.png" />
+    <Content Include="Resources\VAR_INOUT.png" />
+    <Content Include="Resources\VAR_INPUT.png" />
+    <Content Include="Resources\VAR_LOCAL.png" />
+    <Content Include="Resources\VAR_OUTPUT.png" />
+    <Content Include="Resources\view-filter.png" />
+    <Content Include="Resources\Warehouse.png" />
+    <Content Include="Resources\WarehouseD.png" />
+    <Content Include="Resources\WarehouseH.png" />
+    <Content Include="Resources\xperience29.ico" />
+    <Content Include="Resources\Zone.png" />
+    <Content Include="Resources\ZoomHS.png" />
+    <Content Include="Resources\ZoomIn.png" />
+    <Content Include="Resources\ZoomOut.png" />
+    <Content Include="Resources\ZoomReset.png" />
+    <EmbeddedResource Include="Forms\TextDialog.resx">
+      <DependentUpon>TextDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Right Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{c75532c4-765b-418e-b09b-46d36b2abdb1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="AdvancedDataGridView\AdvancedDataGridView.csproj">
+      <Project>{6eba0a55-b390-4479-a564-58d46094998d}</Project>
+      <Name>AdvancedDataGridView</Name>
+    </ProjectReference>
+    <ProjectReference Include="ObjectListView\ObjectListView2012.csproj">
+      <Project>{18feda0c-d147-4286-b39a-01204808106a}</Project>
+      <Name>ObjectListView2012</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

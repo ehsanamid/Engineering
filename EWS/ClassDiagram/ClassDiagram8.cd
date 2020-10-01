@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EWSTools.tblSolution">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <Members>
+      <Field Name="_HistoricalServer" Hidden="true" />
+      <Field Name="_ILConDAS" Hidden="true" />
+      <Field Name="_instansename" Hidden="true" />
+      <Field Name="_IsNetworkRedundant" Hidden="true" />
+      <Field Name="_LogEnabled" Hidden="true" />
+      <Field Name="_NewName" Hidden="true" />
+      <Field Name="_ProjectPath" Hidden="true" />
+      <Field Name="_ServerName" Hidden="true" />
+      <Field Name="_ServerRedundancy" Hidden="true" />
+      <Field Name="_SolutionName" Hidden="true" />
+      <Field Name="_SQL_Delete" Hidden="true" />
+      <Field Name="_SQL_Insert" Hidden="true" />
+      <Field Name="_SQL_Rename" Hidden="true" />
+      <Field Name="_SQL_Select" Hidden="true" />
+      <Field Name="_SQL_Select_ALL" Hidden="true" />
+      <Field Name="_SQL_Update" Hidden="true" />
+      <Field Name="_sqlserveripAddress" Hidden="true" />
+      <Field Name="_sqlservername" Hidden="true" />
+      <Field Name="_tblboardtypescollection" Hidden="true" />
+      <Field Name="_tbldomaincollection" Hidden="true" />
+      <Field Name="_tblfunctioncollection" Hidden="true" />
+      <Field Name="_tblvariablecollection" Hidden="true" />
+      <Field Name="_tblvartypecollection" Hidden="true" />
+      <Field Name="mainform" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AkYAIEAggEGGAAiEkAkBwnAAMDnQUWQNASACQEgAhAQ=</HashCode>
+      <FileName>Project Objects\dbo.tblSolution.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblSolutionCollection" Collapsed="true">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAEAAAEAAAAAACAAABAAAAAAAAAAAgAAAAAAQAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblSolution.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblController">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <Members>
+      <Field Name="_ControllerID" Hidden="true" />
+      <Field Name="_ControllerName" Hidden="true" />
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_DomainID" Hidden="true" />
+      <Field Name="_DomainID_tblDomain" Hidden="true" />
+      <Field Name="_NodeNumber" Hidden="true" />
+      <Field Name="_oIndex" Hidden="true" />
+      <Field Name="_Redundant" Hidden="true" />
+      <Field Name="_SQL_Delete" Hidden="true" />
+      <Field Name="_SQL_Insert" Hidden="true" />
+      <Field Name="_SQL_Select" Hidden="true" />
+      <Field Name="_SQL_Select_ALL" Hidden="true" />
+      <Field Name="_SQL_Update" Hidden="true" />
+      <Field Name="_TargetType" Hidden="true" />
+      <Field Name="_tblIORackCollection" Hidden="true" />
+      <Field Name="_tblPOUCollection" Hidden="true" />
+      <Field Name="GlobalPOUID" Hidden="true" />
+      <Field Name="iecproject" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>JBYkA0AgiEAigCACEABhpEgAECmAAEMcACAAwB4AIgA=</HashCode>
+      <FileName>Project Objects\dbo.tblController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.m_tblControllerCollection" Collapsed="true">
+    <Position X="7.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAkAAAAAAAAAACEAABAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblDomain">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <Members>
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_DomainID" Hidden="true" />
+      <Field Name="_DomainName" Hidden="true" />
+      <Field Name="_DomainNo" Hidden="true" />
+      <Field Name="_oIndex" Hidden="true" />
+      <Field Name="_SolutionName" Hidden="true" />
+      <Field Name="_SolutionName_tblSolution" Hidden="true" />
+      <Field Name="_SQL_Delete" Hidden="true" />
+      <Field Name="_SQL_Insert" Hidden="true" />
+      <Field Name="_SQL_Select" Hidden="true" />
+      <Field Name="_SQL_Select_ALL" Hidden="true" />
+      <Field Name="_SQL_Update" Hidden="true" />
+      <Field Name="_tblControllerCollection" Hidden="true" />
+      <Field Name="_tbldisplaycollection" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>KAYkCEIggEAkAAAAEAgBhGAIECmAAEAsACAAQAgAAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblDomain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblDomainCollection" Collapsed="true">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAEAAAAAAAAAACAAADAIAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblDomain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblBoard">
+    <Position X="11" Y="3.25" Width="1.5" />
+    <Members>
+      <Field Name="_BoardGroup" Hidden="true" />
+      <Field Name="_BoardID" Hidden="true" />
+      <Field Name="_BoardName" Hidden="true" />
+      <Field Name="_BoardNo" Hidden="true" />
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_IORackID" Hidden="true" />
+      <Field Name="_IorackID_tblIORack" Hidden="true" />
+      <Field Name="_MBA" Hidden="true" />
+      <Field Name="_oIndex" Hidden="true" />
+      <Field Name="_Redundant" Hidden="true" />
+      <Field Name="_ScanTime" Hidden="true" />
+      <Field Name="_SlotNo1" Hidden="true" />
+      <Field Name="_SlotNo2" Hidden="true" />
+      <Field Name="_SQL_Delete" Hidden="true" />
+      <Field Name="_SQL_Insert" Hidden="true" />
+      <Field Name="_SQL_Select" Hidden="true" />
+      <Field Name="_SQL_Select_ALL" Hidden="true" />
+      <Field Name="_SQL_Update" Hidden="true" />
+      <Field Name="_tblChannelCollection" Hidden="true" />
+      <Field Name="_Type" Hidden="true" />
+      <Field Name="tblboardtypes" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>OAZMEEAiAECgAAADEACBoEBUGCutAEKEISAAwIEApAA=</HashCode>
+      <FileName>Project Objects\dbo.tblBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblBoardCollection" Collapsed="true">
+    <Position X="11" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAEAQAAAAAAAACAAABAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblIORack">
+    <Position X="9.25" Y="3.25" Width="1.5" />
+    <Members>
+      <Field Name="_ControllerID" Hidden="true" />
+      <Field Name="_ControllerID_tblController" Hidden="true" />
+      <Field Name="_EngagedSlots" Hidden="true" />
+      <Field Name="_IORackID" Hidden="true" />
+      <Field Name="_IORackName" Hidden="true" />
+      <Field Name="_IORackNo" Hidden="true" />
+      <Field Name="_NoOfSlots" Hidden="true" />
+      <Field Name="_oIndex" Hidden="true" />
+      <Field Name="_SQL_Delete" Hidden="true" />
+      <Field Name="_SQL_Insert" Hidden="true" />
+      <Field Name="_SQL_Select" Hidden="true" />
+      <Field Name="_SQL_Select_ALL" Hidden="true" />
+      <Field Name="_SQL_Update" Hidden="true" />
+      <Field Name="_tblBoardCollection" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>oBYEAEAgAGAiQABAEEBBgGgAEamgAEIIACAQQAAAgAA=</HashCode>
+      <FileName>Project Objects\dbo.tblIORack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblIORackCollection" Collapsed="true">
+    <Position X="9.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAEACAAAAAAAACAAABAAAAAAAAABAAAAAAAAQAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblIORack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblPOUCollection" Collapsed="true">
+    <Position X="13" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEoQAEAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblPOU.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblFunction">
+    <Position X="14.75" Y="3.25" Width="1.5" />
+    <Members>
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Extensible" Hidden="true" />
+      <Field Name="_FunctionGroup" Hidden="true" />
+      <Field Name="_FunctionName" Hidden="true" />
+      <Field Name="_IsFunction" Hidden="true" />
+      <Field Name="_SQL_Delete" Hidden="true" />
+      <Field Name="_SQL_Insert" Hidden="true" />
+      <Field Name="_SQL_Select" Hidden="true" />
+      <Field Name="_SQL_Select_ALL" Hidden="true" />
+      <Field Name="_SQL_Update" Hidden="true" />
+      <Field Name="_tblPinCollection" Hidden="true" />
+      <Field Name="Solution_tblSolution" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQAQEAoAWAiAQBAEAADgEAAACmAAEAEECAQUEAAAgA=</HashCode>
+      <FileName>Project Objects\dbo.tblFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblFunctionCollection" Collapsed="true">
+    <Position X="14.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAEAAAAAAAAAASAAABAAAAAAIAAAAAAAABAAQAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblFormalParameter">
+    <Position X="16.75" Y="3.25" Width="1.5" />
+    <Members>
+      <Field Name="_Class" Hidden="true" />
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Extensible" Hidden="true" />
+      <Field Name="_FunctionName" Hidden="true" />
+      <Field Name="_FunctionName_tblFunction" Hidden="true" />
+      <Field Name="_oIndex" Hidden="true" />
+      <Field Name="_PinName" Hidden="true" />
+      <Field Name="_SQL_Delete" Hidden="true" />
+      <Field Name="_SQL_Insert" Hidden="true" />
+      <Field Name="_SQL_Select" Hidden="true" />
+      <Field Name="_SQL_Select_ALL" Hidden="true" />
+      <Field Name="_SQL_Update" Hidden="true" />
+      <Field Name="_Type" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>IAQEwEAggEAgAABgEAIDgEAAABmAAEAEAaCAUAAABAA=</HashCode>
+      <FileName>Project Objects\dbo.tblFormalParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblPinCollection" Collapsed="true">
+    <Position X="16.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAEAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblFormalParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblPou">
+    <Position X="13" Y="3.25" Width="1.5" />
+    <Members>
+      <Field Name="_ControllerID" Hidden="true" />
+      <Field Name="_ControllerID_tblController" Hidden="true" />
+      <Field Name="_CycleGroup" Hidden="true" />
+      <Field Name="_CycleTime" Hidden="true" />
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Language" Hidden="true" />
+      <Field Name="_oIndex" Hidden="true" />
+      <Field Name="_pouID" Hidden="true" />
+      <Field Name="_pouName" Hidden="true" />
+      <Field Name="_SQL_Delete" Hidden="true" />
+      <Field Name="_SQL_Insert" Hidden="true" />
+      <Field Name="_SQL_Select" Hidden="true" />
+      <Field Name="_SQL_Select_ALL" Hidden="true" />
+      <Field Name="_SQL_Update" Hidden="true" />
+      <Field Name="_Type" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>JAQEAEAgCEAgAgAAEABBgEwBASmABEoEASgAQIAABAg=</HashCode>
+      <FileName>Project Objects\dbo.tblPOU.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblDisplay">
+    <Position X="19" Y="3.25" Width="2" />
+    <Members>
+      <Field Name="_DisplayID" Hidden="true" />
+      <Field Name="_DisplayName" Hidden="true" />
+      <Field Name="_DomainID" Hidden="true" />
+      <Field Name="_DomainID_tblDomain" Hidden="true" />
+      <Field Name="_oIndex" Hidden="true" />
+      <Field Name="_ParentID" Hidden="true" />
+      <Field Name="_SQL_Delete" Hidden="true" />
+      <Field Name="_SQL_Insert" Hidden="true" />
+      <Field Name="_SQL_Select" Hidden="true" />
+      <Field Name="_SQL_Update" Hidden="true" />
+      <Field Name="_type" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>IAQEEkAgAAIAAAQAEAABhEAAEAmBCEAAACAQwAQAAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblDisplayCollection" Collapsed="true">
+    <Position X="19" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEIAAEAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="EWSTools.tblProject_Fields" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAGAACAAAAAAAAAAAAAACQAAAACAAAAAAQ=</HashCode>
+      <FileName>Project Objects\dbo.tblSolution.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.tblController_Fields" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAAAAAAAAAkAAAABAAAIAAIAAAAAAAQAAAAgAAAAgA=</HashCode>
+      <FileName>Project Objects\dbo.tblController.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.tblDomain_Fields" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAAAAAkAAAAAAAAAAAIEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblDomain.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.tblBoard_Fields" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IABIEAAAAAAgAAABAACAIAAAAAApAAAAAQAAAAAAIAA=</HashCode>
+      <FileName>Project Objects\dbo.tblBoard.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.tblIORack_Fields" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAACACQAAAAAAAAAgAAIAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblIORack.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.tblProgram_Fields" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAACAAgAAAAAAAAAAAIAAAABAAQAQEAAIAAAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblPOU.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.tblFunction_Fields" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAACAAAAAIAAAAAAAAAAAEAEAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblFunction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.tblPin_Fields" Collapsed="true">
+    <Position X="16.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAgAAAAAAgAABAAAICAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblFormalParameter.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EWSTools.tblDisplay_Fields" Collapsed="true">
+    <Position X="19" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAEAAAAAAAAAAAAAAAAAAAEAABCAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="EWSTools.POUChangedEventHandler" Collapsed="true">
+    <Position X="13" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblPOU.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

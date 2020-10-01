@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EWSTools.tbltaskCollection" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAEAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Project Objects\dbo.tbltask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWSTools.tblChannel">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <Members>
+      <Field Name="_BoardID" Hidden="true" />
+      <Field Name="_BoardID_tblBoard" Hidden="true" />
+      <Field Name="_CHN" Hidden="true" />
+      <Field Name="_SQL_Delete" Hidden="true" />
+      <Field Name="_SQL_Insert" Hidden="true" />
+      <Field Name="_SQL_Select" Hidden="true" />
+      <Field Name="_SQL_Select_ALL" Hidden="true" />
+      <Field Name="_SQL_Update" Hidden="true" />
+      <Field Name="_Type" Hidden="true" />
+      <Field Name="_VarNameID" Hidden="true" />
+      <Field Name="_VarNameID_tblVariable" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ACQQAEAgAECAAAASgACBgEAAAAmAAEYAAWAAQAAABAA=</HashCode>
+      <FileName>Project Objects\dbo.tblChannel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="EWSTools.tblChannel_Fields" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAQACAKAAgACAAAAAiAAIAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Project Objects\dbo.tblChannel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DocToolkit.DrawArea">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="DocToolkit.DrawArea.DrawToolType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Draw\DrawArea.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CUUAggPAJCSAp4SclJCDwCpjglBIAgEAAUARCSkKFQI=</HashCode>
+      <FileName>Draw\DrawArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.DrawObject" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AokgAAGAAIBkg4xwEQBSzBIABAgWEASBDQAEw18KgDo=</HashCode>
+      <FileName>Draw\DrawObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DocToolkit.DrawImage" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIAAAYKACIBAAgggEABCwCAAAAAyQAAAAQAAAAAAABA=</HashCode>
+      <FileName>Draw\DrawImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.DrawLine" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAACACFAIBAAgggAEACQAABAAAQBQAQAUAAEADAABA=</HashCode>
+      <FileName>Draw\DrawLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.DrawRectangle" Collapsed="true">
+    <Position X="12" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACACIBAAgggEAACwCAAAAAyAAAAAQAAQBAAABA=</HashCode>
+      <FileName>Draw\DrawRectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.DrawText" Collapsed="true">
+    <Position X="14.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAiAAIDAAgggEBBCwCAAABCwAAAAAQAAAgAGCBA=</HashCode>
+      <FileName>Draw\DrawText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.DrawVariable" Collapsed="true">
+    <Position X="16.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACACIFEAgggEAAKwCAAAAAyEAABAQAAQBgABBA=</HashCode>
+      <FileName>Draw\DrawVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

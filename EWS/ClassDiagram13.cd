@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EWS.OtherControls.TabDisplayPageControl">
+    <Position X="1.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAIAAAAAAgACAAACCAAAABAAAAAAAAA=</HashCode>
+      <FileName>Other Controls\TabDisplayPageControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWS.OtherControls.TabGraphicPageControl">
+    <Position X="4.25" Y="1.75" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAIAAAACAgACAABCAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Other Controls\TabGraphicPageControl.cs</FileName>
+      <NewMemberFileName>Other Controls\TabFBDPageControl.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EWS.OtherControls.TabTextPageControl" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgEAAAAAAAIAAAACAgACAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Other Controls\TabTextPageControl.cs</FileName>
+      <NewMemberFileName>Other Controls\TabSTPageControl.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

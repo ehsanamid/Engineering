@@ -1,0 +1,260 @@
+<!-- Start Article -->
+<span id="ArticleContent">
+<ul class="download">
+<li><a href="DrawToolsRedux/DrawToolsRedux_demo.zip">Download demo - 54.19 KB</a> </li>
+
+<li><a href="DrawToolsRedux/DrawToolsRedux-Source.zip">Download Source (VS 2008)- 912.44 KB </a></li>
+</ul>
+
+<h4>Updated 6/23/2010</h4>
+
+<ul class="download">
+<li><a href="DrawToolsRedux/DrawToolsRedux.zip">Download updated demo - 58 KB</a> </li>
+
+<li><a href="DrawToolsRedux/DrawToolsRedux-Source.zip">Download (VS 2010) updated source -&nbsp;880 KB</a> </li>
+</ul>
+<img width="465" height="303" alt="Draw Tools Redux Image" src="DrawToolsRedux/DrawToolsRedux.png" border="0" hspace="0" complete="true" complete="true" /> 
+<h2>Introduction</h2>
+
+<p>Alex Fr provided an excellent set of drawing tools in his <a href="http://www.codeproject.com/csharp/drawtools.asp">DrawTools</a> article and these tools serve as a basis for this article, which expands on the original toolset in the following ways: </p>
+
+<ol>
+<li>In addition to the basic Rectangle, Ellipse, Line and Scribble tools, this version adds PolyLine, Filled Ellipse, Filled Rectangle, Text and Image tools </li>
+
+<li>Multiple drawing Layers </li>
+
+<li>Zooming </li>
+
+<li>Panning </li>
+
+<li>Rotation </li>
+</ol>
+
+<p>In this article, I will describe how Layers were implemented, as well as the Text and Image tools. </p>
+
+<h2>Background</h2>
+
+<p>See the original DrawTools article for details on how the basic application is built, class structure, etc. </p>
+
+<p>It is also assumed that the reader has a working understanding of GDI+ fundamentals, including Matrices. For an excellent introduction to GDI+, see <a href="http://www.bobpowell.net/">www.bobpowell.net</a>.</p>
+
+<h2>Implementing Layers </h2>
+
+<p>Adding Layers to the application involved adding two classes, <code>Layer</code> and <code>Layers</code>, where <code>Layer</code> defines a single Layer and <code>Layers</code> defines the collection of <code>Layers </code>in an <code>ArrayList</code>. </p>
+
+<p>Each Layer exposes the following properties: </p>
+
+<pre lang="cs"> private string _name;
+ private bool _isDirty;
+ private bool _visible;
+ private bool _active;
+ private GraphicsList _graphicsList;</pre>
+
+<p>Note that the <code>Layer</code> contains the <code>GraphicsList</code> - this is the key to the whole thing - each <code>Layer</code> contains its own list of drawing objects instead of <code>DrawArea</code>. <code>DrawArea</code> is modified to declare a <code>Layers</code> collection instead of a <code>GraphicsList</code> collection: </p>
+
+<pre lang="cs"> // Define the Layers collection
+ private Layers _layers; </pre>
+
+<p>When <code>DrawArea </code>is initialized, the <code>Layers</code> are initialized by creating the first <code>Layer</code> and setting it <code>Active </code>and <code>Visible</code>:</p>
+
+<pre lang="cs"> public DrawArea()
+ {
+ // create list of Layers, with one default active visible layer
+ _layers = new Layers();
+ _layers.CreateNewLayer(&quot;Default&quot;);
+ _panning = false;
+ _panX = 0;
+ _panY = 0;
+ // This call is required by the Windows.Forms Form Designer.
+ InitializeComponent();
+ }</pre>
+
+<p>In the <code>Layers </code>class, the <code>CreateNewLayer()</code> method actually creates the new <code>Layer</code>:</p>
+
+<pre lang="cs"> /// &lt;summary&gt;
+ /// Create a new layer at the head of the layers list and set it 
+ /// to Active and Visible.
+ /// &lt;/summary&gt;
+ /// &lt;param name=&quot;theName&quot;&gt;The name to assign to the new layer&lt;/param&gt;
+ public void CreateNewLayer(string theName)
+ {
+ // Deactivate the currently active Layer
+ if(layerList.Count &gt; 0)
+ ((Layer)layerList[ActiveLayerIndex]).IsActive = false;
+ // Create new Layer, set it visible and active
+ Layer l = new Layer();
+ l.IsVisible = true;
+ l.IsActive = true;
+ l.LayerName = theName;
+ // Initialize empty GraphicsList for future objects
+ l.Graphics = new GraphicsList();
+ // Add to Layers collection
+ this.Add(l);
+ }</pre>
+
+<p>Note that any one or all <code>Layers </code>can be visible at the same time, but only one <code>Layer </code>may be active at any time.</p>
+
+<p>You can control the <code>Layers </code>in the sample application by clicking on the Current <code>Layer</code>: name at the bottom of the application window - Click on the name (&quot;<code>Default</code>&quot;) to open the <code>Layers </code>dialog:</p>
+<img width="407" height="180" src="DrawToolsRedux/Layers_Control.png" border="0" hspace="0" complete="true" complete="true" /> 
+<p>From this dialog, you can Add new <code>Layers</code>, change the names of the <code>Layer</code>(s), and change the <code>Layer</code>(s) visibility and which <code>Layer </code>is <code>Active</code>. The &quot;New Layer&quot; column is checked whenever you click the &quot;Add Layer&quot; button. To delete Layer(s), simply check the &quot;Deleted&quot; column and close the dialog with the &quot;Close&quot; button. Remember only one Layer may be active at any one time. You will be reminded of this if you attempt to have more than one <code>Layer </code>active. Also note the Active <code>Layer </code>must be <code>Visible</code>.</p>
+
+<p>When the application runs, each object that is drawn is added to the <code>GraphicsList</code> maintained by the active <code>Layer</code>. Note this relationship is preserved through saving and re-opening a drawing file.</p>
+
+<p>Layers come in very handy when you want to draw &quot;on top of&quot; another image. For example, the image at the top of this article contains two layers. The following image shows the same picture with the Background Layer turned off:</p>
+<img width="465" height="303" src="DrawToolsRedux/DrawToolsRedux-1.png" border="0" hspace="0" complete="true" complete="true" /> 
+<p>Here is the same drawing with the Drawing Layer invisible and the Background Layer visible:</p>
+<img width="465" height="303" src="DrawToolsRedux/DrawToolsRedux-2.png" border="0" hspace="0" complete="true" complete="true" /> 
+<p>Objects on Layers which are visible but not active cannot be selected, moved, deleted, etc.</p>
+
+<p>Each drawing object is added to the correct <code>Layer </code>by the <code>AddNewObject()</code> method in the <code>ToolObject</code> class: </p>
+
+<pre lang="cs">protected void AddNewObject(DrawArea drawArea, DrawObject o)
+{
+     int al = drawArea.TheLayers.ActiveLayerIndex;
+     drawArea.TheLayers[al].Graphics.UnselectAll();
+     o.Selected = true;
+   o.Dirty = true;
+   drawArea.TheLayers[al].Graphics.Add(o);
+     drawArea.Capture = true;
+   drawArea.Refresh();
+} </pre>
+
+<h2>Implementing Zooming, Panning, and Rotation </h2>
+
+<p>Zooming, Panning, and Rotation&nbsp;are implemented by adding a few variables and some code to the <code>MainForm</code> and <code>DrawArea</code> classes.</p>
+
+<p>Zooming is controlled by buttons on the form, and also by the mouse wheel when Ctrl is held down.</p>
+
+<p>Pan is controlled by the Hand button on the form, and can be cancelled by a right-click.</p>
+
+<p>Rotation is controlled by buttons on the form - note Rotation affects the entire drawing.</p>
+
+<p>Here is an example of all three in use:</p>
+<img width="465" height="303" alt="Screenshot - DrawToolsRedux-3.png" src="DrawToolsRedux/DrawToolsRedux-3.png" border="0" hspace="0" complete="true" complete="true" /> 
+<p>The heart of this code is the <code>BackTrackMouse()</code> method, which takes the &quot;apparent&quot; mouse position and converts it to a valid point based on the current Zoom level, Pan position, and Rotation:</p>
+
+<pre lang="cs">/// &lt;summary&gt;
+ /// Back Track the Mouse to return accurate coordinates regardless of 
+ /// zoom or pan effects.
+ /// Courtesy of BobPowell.net &lt;seealso cref=&quot;http://www.bobpowell.net/backtrack.htm&quot;/&gt;
+ /// &lt;/summary&gt;
+ /// &lt;param name=&quot;p&quot;&gt;Point to backtrack&lt;/param&gt;
+ /// &lt;returns&gt;Backtracked point&lt;/returns&gt;
+ public Point BackTrackMouse(Point p)
+ {
+     // Backtrack the mouse...
+     Point[] pts = new Point[] { p };
+     Matrix mx = new Matrix();
+     mx.Translate(-this.ClientSize.Width / 2, -this.ClientSize.Height / 2, 
+			MatrixOrder.Append);
+     mx.Rotate(_rotation, MatrixOrder.Append);
+     mx.Translate(this.ClientSize.Width / 2 + _panX, this.ClientSize.Height / 2 + 
+			_panY, MatrixOrder.Append);
+     mx.Scale(_zoom, _zoom, MatrixOrder.Append);
+     mx.Invert();
+     mx.TransformPoints(pts);
+     return pts[0];
+ }</pre>
+
+<p>This routine comes from <a href="www.bobpowell.net">Bob Powell's</a> excellent website. Through the use of the GDI+ Matrix class, the mouse point passed to this method is moved (Translate), Rotated, and Scaled based on the current PanX, PanY, Zoom, and Rotation values. The important thing to remember is that anytime you need to determine where the mouse pointer actually is in your drawing, you must call this method. You will see this method used throughout the program in the <code>DrawArea</code> class as well as others. An example of its usage is shown here:</p>
+
+<pre lang="cs">private void DrawArea_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+{
+     lastPoint = BackTrackMouse(e.Location);
+     if (e.Button == MouseButtons.Left)
+         tools[(int)activeTool].OnMouseDown(this, e);
+     else if (e.Button == MouseButtons.Right)
+     {
+         if (_panning == true)
+             _panning = false;
+         ActiveTool = DrawArea.DrawToolType.Pointer;
+     }
+     //OnContextMenu(e);
+}</pre>
+
+<p>The current zoom level is controlled by the following simple routine:</p>
+
+<pre lang="cs">private void AdjustZoom(float _amount)
+{
+    drawArea.Zoom += _amount;
+    if (drawArea.Zoom &lt; .1f)
+        drawArea.Zoom = .1f;
+    if (drawArea.Zoom &gt; 10)
+        drawArea.Zoom = 10f;
+    drawArea.Invalidate();
+    SetStateOfControls();
+}</pre>
+
+<p>Then in the <code>DrawArea.Paint()</code> method, the zoom, pan, and rotation values are used to alter the way the canvas is painted:</p>
+
+<pre lang="cs">private void DrawArea_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
+{
+    Matrix mx = new Matrix();
+    mx.Translate(-this.ClientSize.Width / 2, -this.ClientSize.Height / 2, 
+			MatrixOrder.Append);
+    mx.Rotate(_rotation, MatrixOrder.Append);
+    mx.Translate(this.ClientSize.Width / 2 + _panX, this.ClientSize.Height / 2 + 
+			_panY, MatrixOrder.Append);
+    mx.Scale(_zoom, _zoom, MatrixOrder.Append);
+    e.Graphics.Transform = mx;
+
+    SolidBrush brush = new SolidBrush(Color.FromArgb(255, 255, 255));
+    e.Graphics.FillRectangle(brush,
+        this.ClientRectangle);
+    // Draw objects on each layer, in succession so we get the correct layering.
+    // Only draw layers that are visible
+    if (_layers != null)
+    {
+        int lc = _layers.Count;
+        for (int i = 0; i &lt; lc; i++)
+        {
+            if(_layers[i].IsVisible == true)
+                if(_layers[i].Graphics != null)
+                    _layers[i].Graphics.Draw(e.Graphics);
+        }
+    }
+    DrawNetSelection(e.Graphics);
+    brush.Dispose();
+}</pre>
+
+<h2>Update - 8/25/2007 - Individual Object Rotation &amp; Bug Fixes</h2>
+
+<p>The primary advancement in this update is the ability to rotate individual objects - when one or more objects are selected, clicking the Rotate tools will rotate those objects instead of the entire drawing surface.</p>
+
+<p>There is one caveat, however - the selection rectangle for the rotated object is not rotated - if someone can help with this, I would greatly appreciate it!</p>
+
+<p>This update also includes several small bug fixes reported by users - thanks to all for reporting!</p>
+
+<h2>History </h2>
+
+<ul>
+<li>3/6/2007: Original article uploaded to The Code Project </li>
+
+<li>3/6/2007: Updated&nbsp;to include more information on zoom/pan/rotation </li>
+
+<li>8/25/2007: Updated Individual Object Rotation </li>
+
+<li>9/27/2007: Added the missing links to the new source code </li>
+
+<li>12/23/2009: 
+<p>Added Tooltip control which appears when mouse is over an object. Tooltip displays the Center coordinates of the object for Rectangle, Ellipse and Image objects. For other objects Tooltip displays starting and ending coordinates. Text objects do not display Tooltip. </p>
+
+<p>This was implemented adding the Tooltip control to the ToolPointer class. Each Draw Object fills the TipText property and the MouseMove event in ToolPointer controls when the Tooltip is displayed and removed from the canvas. </p>
+
+<p>This implementation is not perfect, as the Tooltip flashes when displayed so is meant as an example of one way information about the object can be displayed. </p>
+
+<p>Perhaps a better way to do this would be to display information about the object in a separate &quot;Information Window&quot; and then only when the object is selected. </p>
+
+<p>See the new source code for details. </p>
+
+<li>6/23/2010: 
+<p>Updated project to include object ordering fix that corrects the way objects are stacked when a file is opened.</p>
+
+<p>Updated project to Visual Studio 2010.</p>
+
+<p>See the new source code for details. </p>
+</li>
+</ul>
+
+</span>
+<!-- End Article -->

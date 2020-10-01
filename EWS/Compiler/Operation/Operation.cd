@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DCS.Compile.Operation.AssignmentOperation">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Compiler\Operation\AssignmentOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DCS.Compile.Operation.FunctionBlockCallOperation">
+    <Position X="8.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Compiler\Operation\FunctionBlockCallOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DCS.Compile.Operation.FunctionCallOperation">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Compiler\Operation\FunctionCallOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DCS.Compile.Operation.SimpleOperation" Collapsed="true">
+    <Position X="10.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Compiler\Operation\SimpleOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DCS.Compile.Operation.IfOperation">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAIAAAAAEAAAAAAAAAAAAAAAAQAAAAAABAA=</HashCode>
+      <FileName>Compiler\Operation\IfOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DCS.Compile.Operation.WhileOperation">
+    <Position X="12.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAIAAAAAEAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Compiler\Operation\WhileOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DCS.Compile.Operation.ForOperation">
+    <Position X="14" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Compiler\Operation\ForOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DCS.Compile.Operation.CaseOperation">
+    <Position X="15.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Compiler\Operation\CaseOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DCS.Compile.Compiler">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IGgAgAkMSSUZUQwBAgRIEMUroEKAQMBACAMKIEAQBAg=</HashCode>
+      <FileName>Compiler\Compiler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DocToolkit.Tool" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAAAAAACAAA=</HashCode>
+      <FileName>Draw\Tool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.ToolObject">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Draw\ToolObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.ToolPointer">
+    <Position X="29.75" Y="5.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="DocToolkit.ToolPointer.SelectionMode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Draw\ToolPointer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQQCAAAAAAAAIIACAAAACCAABAAAAAAIAAAAAACAAA=</HashCode>
+      <FileName>Draw\ToolPointer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.ToolConnector">
+    <Position X="5.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAABAAAAAAIAAAAAAAQBA=</HashCode>
+      <FileName>Draw\ToolConnector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.ToolImage">
+    <Position X="10.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAAAAAACAAA=</HashCode>
+      <FileName>Draw\ToolImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.ToolLine">
+    <Position X="3.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Draw\ToolLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.ToolPolygon">
+    <Position X="12.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAQAAAAAAABAIAAAAAAAAAAABAAAAAAIAAAAAACAAA=</HashCode>
+      <FileName>Draw\ToolPolygon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.ToolPolyLine">
+    <Position X="14.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAABAAAAAAIAAAAAAAABA=</HashCode>
+      <FileName>Draw\ToolPolyLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.ToolRectangle">
+    <Position X="22" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Draw\ToolRectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.ToolText">
+    <Position X="24.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Draw\ToolText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.ToolFunction">
+    <Position X="26.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAEgQAAACAAAAAAABAAAAAAIAAAAAAAAQA=</HashCode>
+      <FileName>Draw\ToolFunction.cs</FileName>
+      <NewMemberFileName>Draw\ToolVariable.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.ToolVariable" Collapsed="true">
+    <Position X="8" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAQAAAAAAAABAAAAAQIAAAAAAAAAA=</HashCode>
+      <FileName>Draw\ToolVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.DrawObject">
+    <Position X="1" Y="10.25" Width="1.5" />
+    <Members>
+      <Field Name="_brushType" Hidden="true" />
+      <Field Name="_center" Hidden="true" />
+      <Field Name="_id" Hidden="true" />
+      <Field Name="_objectid" Hidden="true" />
+      <Field Name="_penType" Hidden="true" />
+      <Field Name="_PinCollectionInput" Hidden="true" />
+      <Field Name="_PinCollectionOutput" Hidden="true" />
+      <Field Name="_resizeable" Hidden="true" />
+      <Field Name="_rotation" Hidden="true" />
+      <Field Name="_zOrder" Hidden="true" />
+      <Field Name="acceptconnection" Hidden="true" />
+      <Field Name="color" Hidden="true" />
+      <Field Name="DrawFunctionParent" Hidden="true" />
+      <Field Name="drawBrush" Hidden="true" />
+      <Field Name="drawpen" Hidden="true" />
+      <Field Name="entryBrush" Hidden="true" />
+      <Field Name="entryColor" Hidden="true" />
+      <Field Name="entryFillColor" Hidden="true" />
+      <Field Name="entryFilled" Hidden="true" />
+      <Field Name="entryPen" Hidden="true" />
+      <Field Name="entryPenWidth" Hidden="true" />
+      <Field Name="entryRotation" Hidden="true" />
+      <Field Name="entryTipText" Hidden="true" />
+      <Field Name="entryZOrder" Hidden="true" />
+      <Field Name="fillColor" Hidden="true" />
+      <Field Name="filled" Hidden="true" />
+      <Field Name="lastUsedColor" Hidden="true" />
+      <Field Name="lastUsedPenWidth" Hidden="true" />
+      <Field Name="movable" Hidden="true" />
+      <Field Name="penWidth" Hidden="true" />
+      <Field Name="selected" Hidden="true" />
+      <Field Name="tipText" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AolwAAWQAIh0k41wUQBSzBIABAgWEASBDQAEw18KgDo=</HashCode>
+      <FileName>Draw\DrawObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DocToolkit.Command">
+    <Position X="6.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.CommandAdd">
+    <Position X="4" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAABAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>CommandAdd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.CommandChangeState">
+    <Position X="6.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAABAAAAAAAAAABAKAAAAgAAQAAAAAAAAA=</HashCode>
+      <FileName>CommandChangeState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.CommandDelete">
+    <Position X="8.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAABABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandDelete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocToolkit.CommandDeleteAll">
+    <Position X="10.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAABABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandDeleteAll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Delegate Name="DocToolkit.SelectedObjectChangedEventHandler" Collapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Draw\DrawObject.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,10 @@
+<Expressions>
+<Expression>
+<FieldName>BOARDERWIDTH</FieldName>
+<FieldType>INT</FieldType>
+<FieldConditions>
+<Condition>A1.PV =1</Condition>
+<Value>1</Value>
+</FieldConditions>
+</Expression>
+</Expressions>
